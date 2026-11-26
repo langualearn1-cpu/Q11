@@ -1,0 +1,1673 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vocabulary: Architecture & Home - المفردات</title>
+    <!-- تحميل مكتبة Tailwind CSS للتصميم العصري المتجاوب -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- تحميل خطوط عربية وإنجليزية واضحة ومناسبة للتعليم -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Fredoka:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- أيقونات FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #f0f9ff;
+            background-image:
+                radial-gradient(at 10% 10%, rgba(125, 211, 252, 0.5) 0px, transparent 50%),
+                radial-gradient(at 90% 15%, rgba(196, 181, 253, 0.45) 0px, transparent 50%),
+                radial-gradient(at 85% 85%, rgba(254, 240, 138, 0.45) 0px, transparent 50%),
+                radial-gradient(at 15% 85%, rgba(167, 243, 208, 0.5) 0px, transparent 50%),
+                url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%230284c7' fill-opacity='0.06'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            background-attachment: fixed;
+            overflow-x: hidden;
+        }
+        .en-text {
+            font-family: 'Fredoka', 'Inter', sans-serif;
+            direction: ltr;
+            unicode-bidi: isolate;
+        }
+        @keyframes pulse-ring {
+            0% { transform: scale(0.85); opacity: 0.85; }
+            50% { transform: scale(1.18); opacity: 0.25; }
+            100% { transform: scale(0.85); opacity: 0.85; }
+        }
+        .speaking-ring {
+            animation: pulse-ring 1.5s infinite ease-in-out;
+        }
+        @keyframes float-gentle {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-4px); }
+        }
+        .animate-float {
+            animation: float-gentle 4s ease-in-out infinite;
+        }
+        .animate-float-delayed {
+            animation: float-gentle 4.5s ease-in-out 1.2s infinite;
+        }
+        .audio-btn {
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+        }
+        .audio-btn:hover {
+            transform: scale(1.05);
+        }
+        .audio-btn:active {
+            transform: scale(0.95);
+        }
+        .clickable-phrase {
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .clickable-phrase:hover {
+            transform: scale(1.015);
+        }
+        .shake {
+            animation: shake 0.45s ease-in-out;
+        }
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            20% { transform: translateX(-6px); }
+            40% { transform: translateX(6px); }
+            60% { transform: translateX(-4px); }
+            80% { transform: translateX(4px); }
+        }
+        /* تظليل البطاقة النشطة أثناء قراءة المعلمة */
+        .active-reading-box {
+            background-color: #fef9c3 !important;
+            border-color: #f59e0b !important;
+            box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.38), 0 12px 22px -4px rgba(245, 158, 11, 0.25) !important;
+            transform: scale(1.025);
+            transition: all 0.25s ease;
+            position: relative;
+            z-index: 10;
+        }
+        .active-reading-text {
+            background: linear-gradient(120deg, #fde047 0%, #fef08a 100%);
+            padding: 2px 8px;
+            border-radius: 8px;
+            color: #78350f !important;
+            box-decoration-break: clone;
+            -webkit-box-decoration-break: clone;
+            transition: all 0.25s ease;
+        }
+    </style>
+</head>
+<body class="min-h-screen text-slate-800 pb-20">
+
+    <!-- شريط علوي ثابت يوضح عنوان الدرس وأدوات التحكم بالصوت -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-sm border-b border-sky-100">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex flex-wrap items-center justify-between gap-3">
+            <!-- عنوان الدرس -->
+            <div class="flex items-center gap-3">
+                <button type="button" onclick="speakText('Vocabulary. Architecture and Home.')" class="audio-btn bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-600 text-white px-5 py-1.5 rounded-full font-bold text-base sm:text-xl shadow-md flex items-center gap-2" title="اضغط لسماع العنوان">
+                    <span class="en-text">Vocabulary</span>
+                    <i class="fa-solid fa-ear-listen text-sky-200 text-base"></i>
+                </button>
+                <span class="hidden md:inline-block text-sm font-semibold text-slate-600 bg-slate-100 px-3 py-1 rounded-full">
+                    المفردات المصوّرة والناطقة (14 كلمة)
+                </span>
+            </div>
+
+            <!-- مؤشر المعلمة الصوتية (نفس نظام الصوت التعليمي الهادئ) -->
+            <div id="teacher-status-box" class="flex flex-wrap items-center gap-2.5 bg-teal-50 border border-teal-200 px-3.5 py-1.5 rounded-full shadow-inner">
+                <div class="relative flex items-center justify-center w-8 h-8 rounded-full bg-teal-600 text-white shrink-0">
+                    <span id="teacher-pulse" class="hidden absolute inset-0 rounded-full bg-teal-400 speaking-ring"></span>
+                    <i class="fa-solid fa-chalkboard-user relative z-10 text-sm"></i>
+                </div>
+                <div class="text-xs sm:text-sm">
+                    <div class="flex flex-wrap items-center gap-1.5 text-[11px] text-teal-700">
+                        <span>الصوت:</span>
+                        <select id="teacher-voice-select" onchange="changeTeacherVoice(this.value)" class="bg-white/90 border border-teal-300 rounded-lg px-2 py-0.5 text-[11px] font-bold text-teal-900 focus:outline-none cursor-pointer">
+                            <option value="calm-female" selected>معلمة هادئة (صوت تعليمي 0.76x)</option>
+                            <option value="calm-male">معلم هادئ (صوت تعليمي 0.76x)</option>
+                        </select>
+                        <button type="button" onclick="toggleSpeechSpeed()" id="speed-toggle-btn" class="bg-white/90 hover:bg-teal-100 border border-teal-300 rounded-lg px-2 py-0.5 text-[11px] font-bold text-teal-900 transition cursor-pointer" title="تبديل سرعة النطق للتدريب">
+                            <i class="fa-solid fa-gauge-high text-teal-600"></i> <span id="speed-label">هادئ (0.76x)</span>
+                        </button>
+                    </div>
+                </div>
+                <button type="button" onclick="stopAudio()" id="stop-audio-btn" class="hidden mr-1 bg-rose-100 hover:bg-rose-200 text-rose-700 px-2.5 py-1 rounded-full text-xs font-bold transition">
+                    <i class="fa-solid fa-stop"></i> إيقاف
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- مؤشر القراءة الحي -->
+    <div id="liveReadingToast" class="fixed bottom-16 left-1/2 -translate-x-1/2 z-50 bg-slate-900/95 backdrop-blur-md text-white px-5 py-2.5 rounded-2xl shadow-2xl border border-slate-700 flex items-center gap-3 transition-all duration-300 opacity-0 pointer-events-none translate-y-8 max-w-[94vw]">
+        <div class="w-3 h-3 rounded-full bg-emerald-400 animate-ping flex-shrink-0"></div>
+        <div class="truncate" dir="ltr">
+            <span id="toastRateLabel" class="text-[11px] text-slate-400 block font-sans">Calm Educational Voice (0.76x):</span>
+            <span id="toastWord" class="en-text font-black text-amber-300 text-base sm:text-lg tracking-wide">...</span>
+        </div>
+    </div>
+
+    <!-- صندوق الإشعارات اللطيف -->
+    <div id="toast-message" class="fixed bottom-5 left-1/2 transform -translate-x-1/2 z-50 hidden bg-slate-800 text-white px-6 py-3 rounded-2xl shadow-xl font-bold text-sm flex items-center gap-2 transition-all">
+        <i class="fa-solid fa-sparkles text-yellow-400"></i>
+        <span id="toast-text">أحسنت!</span>
+    </div>
+
+    <!-- المحتوى الرئيسي -->
+    <main class="max-w-6xl mx-auto px-4 pt-6 space-y-10">
+
+        <!-- ========================================== -->
+        <!-- القسم الأول: بطاقات المفردات الـ 14 التفاعلية -->
+        <!-- ========================================== -->
+        <section class="bg-white rounded-3xl shadow-lg border border-sky-200 overflow-hidden">
+            <!-- رأس القسم -->
+            <div dir="ltr" class="bg-gradient-to-r from-blue-700 via-indigo-600 to-cyan-600 p-4 sm:px-6 flex flex-wrap items-center justify-between gap-3 text-white">
+                <div class="flex items-center gap-3 clickable-phrase" onclick="speakText('Vocabulary. Listen, point, and say.')">
+                    <span class="bg-white text-blue-700 w-10 h-10 rounded-2xl flex items-center justify-center font-black text-lg shadow shrink-0">
+                        <i class="fa-solid fa-book-open"></i>
+                    </span>
+                    <div>
+                        <h1 class="en-text text-xl sm:text-2xl font-extrabold tracking-wide">Vocabulary • Listen &amp; Learn</h1>
+                        <span dir="rtl" class="text-xs text-sky-100 font-semibold block">اضغط على أي بطاقة لسماع نطق الكلمة الإنجليزية ومشاهدة معناها بالعربية</span>
+                    </div>
+                </div>
+                <div class="flex flex-wrap items-center gap-2 ml-auto" dir="rtl">
+                    <button type="button" onclick="playAllVocabWords()" class="audio-btn bg-white/25 hover:bg-white/35 text-white border border-white/40 px-4 py-2 rounded-full text-xs sm:text-sm font-bold flex items-center gap-2 backdrop-blur-sm shadow">
+                        <i class="fa-solid fa-volume-high"></i>
+                        <span>استمع لجميع الكلمات (14)</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- شريط أدوات الفلترة وإخفاء/إظهار الترجمة للمراجعة الذاتية -->
+            <div class="bg-gradient-to-r from-sky-50 via-indigo-50/60 to-amber-50/60 border-b border-sky-100 px-5 py-3 flex flex-wrap items-center justify-between gap-3">
+                <div class="flex items-center gap-2 text-xs sm:text-sm font-bold text-slate-700">
+                    <i class="fa-solid fa-lightbulb text-amber-500 text-base"></i>
+                    <span>للتدريب الذاتي: يمكنك إخفاء المعاني العربية واختبار حفظك للكلمات!</span>
+                </div>
+                <button type="button" id="toggle-ar-btn" onclick="toggleArabicMeanings()" class="audio-btn bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-1.5 rounded-full text-xs font-bold flex items-center gap-1.5 shadow-sm">
+                    <i class="fa-solid fa-eye-slash"></i>
+                    <span id="toggle-ar-label">إخفاء الترجمة العربية</span>
+                </button>
+            </div>
+
+            <!-- شبكة البطاقات الـ 14 بنفس ترتيب الجدول في الصورة تماماً (عمودان في الشاشات المتوسطة والكبيرة) -->
+            <div dir="ltr" class="p-5 sm:p-7 bg-gradient-to-b from-slate-50/70 to-white">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5">
+
+                    <!-- 1. Architect (مهندس معماري) -->
+                    <div id="vocab-card-architect" data-speak="Architect" onclick="speakText('Architect', null, false, 'vocab-card-architect')" class="sentence-box clickable-phrase bg-white hover:bg-sky-50/70 rounded-3xl border-2 border-blue-200 hover:border-amber-400 p-4 shadow-md hover:shadow-xl transition-all flex items-center justify-between gap-3 group">
+                        <div class="flex-1 space-y-1.5 text-center">
+                            <div class="flex items-center justify-center gap-2">
+                                <span class="w-7 h-7 rounded-full bg-blue-600 text-white font-black text-xs flex items-center justify-center shrink-0 en-text">1</span>
+                                <span class="w-7 h-7 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center text-xs">
+                                    <i class="fa-solid fa-volume-high"></i>
+                                </span>
+                            </div>
+                            <h2 class="sentence-text en-text text-2xl sm:text-3xl font-black text-slate-900">Architect</h2>
+                            <p dir="rtl" class="arabic-meaning text-sm sm:text-base font-extrabold text-blue-800 bg-blue-50 inline-block px-3.5 py-0.5 rounded-full border border-blue-200">مهندس معماري</p>
+                        </div>
+                        <div class="w-28 h-24 rounded-2xl bg-white border border-blue-100 p-1 flex items-center justify-center shrink-0 overflow-hidden shadow-inner">
+                            <!-- SVG: Architect (مهندس معماري بالخوذة البرتقالية والبدلة الزرقاء ولفافة المخطط مطابق للصورة 100%) -->
+                            <svg viewBox="0 0 220 265" preserveAspectRatio="xMidYMid meet" class="w-full h-full animate-float group-hover:scale-105 transition-transform">
+                                <!-- الظل الأرضي البيضاوي -->
+                                <ellipse cx="108" cy="252" rx="64" ry="8" fill="#cbd5e1"/>
+                                <!-- الحافظة الرمادية خلف الظهر -->
+                                <polygon points="32,148 74,134 86,204 46,196" fill="#94a3b8" stroke="#0f172a" stroke-width="3" stroke-linejoin="round"/>
+                                <polygon points="40,152 68,143 78,195 52,189" fill="#64748b"/>
+                                <!-- الساقان والحذاءان البنيان -->
+                                <path d="M78,196 L138,196 L144,242 L122,242 L112,212 L96,242 L74,242 Z" fill="#4775a3" stroke="#0f172a" stroke-width="3" stroke-linejoin="round"/>
+                                <!-- ثنيات أسفل البنطال -->
+                                <rect x="71" y="238" width="27" height="7" rx="3" fill="#3b638c" stroke="#0f172a" stroke-width="2.6"/>
+                                <rect x="120" y="238" width="27" height="7" rx="3" fill="#3b638c" stroke="#0f172a" stroke-width="2.6"/>
+                                <!-- الحذاء الأيسر والأيمن -->
+                                <path d="M58,252 C58,242 74,238 94,242 L96,252 C84,256 64,256 58,252 Z" fill="#6b4423" stroke="#0f172a" stroke-width="3" stroke-linejoin="round"/>
+                                <path d="M122,242 C142,238 158,242 158,252 C152,256 132,256 120,252 Z" fill="#6b4423" stroke="#0f172a" stroke-width="3" stroke-linejoin="round"/>
+                                <!-- السترة الزرقاء والقميص الأبيض وربطة العنق -->
+                                <path d="M62,126 C76,116 140,116 154,126 L168,176 L150,182 L144,154 L144,200 L72,200 L72,154 L66,182 L48,176 Z" fill="#4775a3" stroke="#0f172a" stroke-width="3" stroke-linejoin="round"/>
+                                <!-- القميص الأبيض وربطة العنق الزرقاء -->
+                                <polygon points="90,118 126,118 114,162 102,162" fill="#ffffff" stroke="#0f172a" stroke-width="2.4"/>
+                                <polygon points="103,124 113,124 116,154 108,162 100,154" fill="#60a5fa" stroke="#0f172a" stroke-width="2.2"/>
+                                <polygon points="102,118 114,118 112,126 104,126" fill="#3b82f6" stroke="#0f172a" stroke-width="2"/>
+                                <!-- ياقة السترة وخط الإغلاق والزر -->
+                                <path d="M88,118 L82,140 L94,144 L88,152 L108,166 L128,152 L122,144 L134,140 L128,118" fill="none" stroke="#0f172a" stroke-width="2.4" stroke-linejoin="round"/>
+                                <line x1="108" y1="166" x2="108" y2="200" stroke="#0f172a" stroke-width="2.6"/>
+                                <circle cx="114" cy="176" r="2.8" fill="#d97706" stroke="#0f172a" stroke-width="1.4"/>
+                                <!-- اليد اليمنى على الخصر -->
+                                <path d="M48,174 C52,188 66,192 78,190 C82,186 80,178 72,176 L64,174 Z" fill="#f59e0b" stroke="#0f172a" stroke-width="2.6" stroke-linejoin="round"/>
+                                <!-- لفافة المخطط الهندسي البيضاء في اليد اليسرى -->
+                                <polygon points="166,112 188,124 146,204 124,192" fill="#f1f5f9" stroke="#0f172a" stroke-width="2.8" stroke-linejoin="round"/>
+                                <ellipse cx="177" cy="118" rx="12" ry="7" transform="rotate(28 177 118)" fill="#94a3b8" stroke="#0f172a" stroke-width="2.6"/>
+                                <circle cx="177" cy="118" r="3.5" fill="#334155"/>
+                                <!-- أصابع اليد اليسرى الممسكة باللفافة -->
+                                <rect x="148" y="154" width="14" height="7" rx="3.5" transform="rotate(26 148 154)" fill="#f59e0b" stroke="#0f172a" stroke-width="2.2"/>
+                                <rect x="144" y="162" width="14" height="7" rx="3.5" transform="rotate(26 144 162)" fill="#f59e0b" stroke="#0f172a" stroke-width="2.2"/>
+                                <rect x="140" y="170" width="14" height="7" rx="3.5" transform="rotate(26 140 170)" fill="#f59e0b" stroke="#0f172a" stroke-width="2.2"/>
+                                <!-- الرقبة والرأس واللحية -->
+                                <rect x="96" y="102" width="24" height="18" fill="#e7bc91" stroke="#0f172a" stroke-width="2.6"/>
+                                <!-- الأذنان -->
+                                <ellipse cx="64" cy="76" rx="8" ry="12" fill="#f3cfa7" stroke="#0f172a" stroke-width="2.6"/>
+                                <ellipse cx="152" cy="76" rx="8" ry="12" fill="#f3cfa7" stroke="#0f172a" stroke-width="2.6"/>
+                                <!-- الوجه -->
+                                <path d="M68,48 C68,26 148,26 148,48 L148,84 C148,104 128,114 108,114 C88,114 68,104 68,84 Z" fill="#f3cfa7" stroke="#0f172a" stroke-width="2.8"/>
+                                <!-- اللحية والشارب -->
+                                <path d="M68,72 C74,74 78,82 80,90 C86,96 100,98 108,98 C116,98 130,96 136,90 C138,82 142,74 148,72 L148,86 C146,104 128,114 108,114 C88,114 70,104 68,86 Z" fill="#57534e" stroke="#0f172a" stroke-width="2.6" stroke-linejoin="round"/>
+                                <!-- الابتسامة والأسنان البيضاء -->
+                                <path d="M90,88 Q108,84 126,88 C124,100 116,104 108,104 C100,104 92,100 90,88 Z" fill="#ffffff" stroke="#0f172a" stroke-width="2.4" stroke-linejoin="round"/>
+                                <!-- الأنف -->
+                                <path d="M106,68 C114,68 118,74 114,78 C110,80 104,80 100,78" fill="none" stroke="#0f172a" stroke-width="2.4" stroke-linecap="round"/>
+                                <!-- العيون الكبيرة والحاجبان -->
+                                <path d="M80,50 Q90,46 98,50" fill="none" stroke="#44403c" stroke-width="4" stroke-linecap="round"/>
+                                <path d="M118,50 Q126,46 136,50" fill="none" stroke="#44403c" stroke-width="4" stroke-linecap="round"/>
+                                <circle cx="90" cy="62" r="9.5" fill="#ffffff" stroke="#0f172a" stroke-width="2.2"/>
+                                <circle cx="91" cy="62" r="5.5" fill="#1d4ed8"/>
+                                <circle cx="91" cy="62" r="3.5" fill="#0f172a"/>
+                                <circle cx="89" cy="60" r="1.8" fill="#ffffff"/>
+                                <circle cx="126" cy="62" r="9.5" fill="#ffffff" stroke="#0f172a" stroke-width="2.2"/>
+                                <circle cx="125" cy="62" r="5.5" fill="#1d4ed8"/>
+                                <circle cx="125" cy="62" r="3.5" fill="#0f172a"/>
+                                <circle cx="123" cy="60" r="1.8" fill="#ffffff"/>
+                                <!-- الخوذة البرتقالية للمهندس -->
+                                <path d="M62,48 C62,18 84,8 108,8 C132,8 154,18 154,48 Z" fill="#f59e0b" stroke="#0f172a" stroke-width="3"/>
+                                <path d="M96,8 L120,8 L124,38 L92,38 Z" fill="#fbbf24" stroke="#0f172a" stroke-width="2.4"/>
+                                <path d="M54,50 C74,36 142,36 162,50 L158,58 C138,44 78,44 58,58 Z" fill="#d97706" stroke="#0f172a" stroke-width="2.8" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- 2. basement (قبو) -->
+                    <div id="vocab-card-basement" data-speak="basement" onclick="speakText('basement', null, false, 'vocab-card-basement')" class="sentence-box clickable-phrase bg-white hover:bg-sky-50/70 rounded-3xl border-2 border-slate-300 hover:border-amber-400 p-4 shadow-md hover:shadow-xl transition-all flex items-center justify-between gap-3 group">
+                        <div class="flex-1 space-y-1.5 text-center">
+                            <div class="flex items-center justify-center gap-2">
+                                <span class="w-7 h-7 rounded-full bg-slate-700 text-white font-black text-xs flex items-center justify-center shrink-0 en-text">2</span>
+                                <span class="w-7 h-7 rounded-full bg-slate-100 text-slate-700 flex items-center justify-center text-xs">
+                                    <i class="fa-solid fa-volume-high"></i>
+                                </span>
+                            </div>
+                            <h2 class="sentence-text en-text text-2xl sm:text-3xl font-black text-slate-900">basement</h2>
+                            <p dir="rtl" class="arabic-meaning text-sm sm:text-base font-extrabold text-slate-800 bg-slate-100 inline-block px-3.5 py-0.5 rounded-full border border-slate-300">قبو</p>
+                        </div>
+                        <div class="w-28 h-24 rounded-2xl bg-slate-900 border border-slate-300 p-1 flex items-center justify-center shrink-0 overflow-hidden shadow-inner">
+                            <!-- SVG: Basement (قبو متكامل بسقف خشبي، درج، رفوف تخزين، مصباح متدلٍ، وغسالتين مطابق للصورة 100%) -->
+                            <svg viewBox="0 0 260 180" preserveAspectRatio="xMidYMid meet" class="w-full h-full animate-float-delayed group-hover:scale-105 transition-transform">
+                                <!-- الجدار الخلفي الأزرق للقبو والأرضية -->
+                                <rect x="0" y="28" width="260" height="122" fill="#475589"/>
+                                <polygon points="0,150 260,150 260,180 0,180" fill="#d99b66"/>
+                                <!-- السقف الخشبي العلوي -->
+                                <polygon points="0,0 260,0 236,30 24,30" fill="#9a441e" stroke="#451a03" stroke-width="1.5"/>
+                                <!-- المصباح المتدلي وإضاءته -->
+                                <line x1="118" y1="30" x2="118" y2="48" stroke="#1e293b" stroke-width="2"/>
+                                <path d="M108,56 C108,48 128,48 128,56 L132,64 L104,64 Z" fill="#334155"/>
+                                <circle cx="118" cy="64" r="5" fill="#fef08a"/>
+                                <!-- رفوف التخزين الخشبية على اليسار -->
+                                <rect x="34" y="30" width="6" height="126" fill="#7c2d12"/>
+                                <rect x="92" y="30" width="6" height="126" fill="#7c2d12"/>
+                                <rect x="30" y="58" width="74" height="5" fill="#9a3412"/>
+                                <rect x="30" y="92" width="74" height="5" fill="#9a3412"/>
+                                <rect x="30" y="126" width="74" height="5" fill="#9a3412"/>
+                                <!-- قوارير وصناديق على الرفوف -->
+                                <rect x="48" y="42" width="10" height="16" rx="2" fill="#38bdf8"/>
+                                <rect x="64" y="38" width="10" height="20" rx="2" fill="#f59e0b"/>
+                                <rect x="72" y="72" width="22" height="20" fill="#eab308"/>
+                                <rect x="46" y="106" width="14" height="20" rx="2" fill="#f97316"/>
+                                <rect x="64" y="104" width="14" height="22" rx="2" fill="#06b6d4"/>
+                                <!-- صناديق كرتونية في أقصى اليسار -->
+                                <rect x="0" y="74" width="38" height="82" fill="#f59e0b" stroke="#92400e" stroke-width="1.5"/>
+                                <rect x="4" y="132" width="42" height="44" fill="#fbbf24" stroke="#92400e" stroke-width="1.5"/>
+                                <!-- لوحة الكهرباء الزرقاء مع مثلث التحذير -->
+                                <rect x="118" y="72" width="26" height="34" rx="2" fill="#38bdf8" stroke="#0284c7" stroke-width="2"/>
+                                <polygon points="131,80 123,96 139,96" fill="#ef4444" stroke="#fef08a" stroke-width="1.2"/>
+                                <!-- الدرج الخشبي الصاعد للأعلى -->
+                                <polygon points="122,156 188,30 218,30 152,156" fill="#7c2d12"/>
+                                <polygon points="138,156 204,30 214,30 148,156" fill="#9a3412"/>
+                                <!-- درجات السلم -->
+                                <g fill="#b45309">
+                                    <rect x="132" y="140" width="22" height="4"/>
+                                    <rect x="140" y="124" width="22" height="4"/>
+                                    <rect x="148" y="108" width="22" height="4"/>
+                                    <rect x="156" y="92" width="22" height="4"/>
+                                    <rect x="164" y="76" width="22" height="4"/>
+                                    <rect x="172" y="60" width="22" height="4"/>
+                                    <rect x="180" y="44" width="22" height="4"/>
+                                </g>
+                                <!-- دلو طلاء أصفر أسفل الدرج -->
+                                <rect x="154" y="146" width="16" height="18" fill="#e2e8f0" stroke="#475569" stroke-width="1.5"/>
+                                <path d="M154,146 L170,146 L166,156 L160,152 Z" fill="#facc15"/>
+                                <!-- الغسالتان في اليمين وسلة الغسيل الخضراء -->
+                                <rect x="174" y="108" width="28" height="46" rx="2" fill="#cbd5e1" stroke="#475569" stroke-width="1.5"/>
+                                <circle cx="188" cy="134" r="9" fill="#1e293b" stroke="#94a3b8" stroke-width="2"/>
+                                <rect x="204" y="108" width="28" height="46" rx="2" fill="#e2e8f0" stroke="#475569" stroke-width="1.5"/>
+                                <circle cx="218" cy="134" r="9" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+                                <!-- سلة الملابس الخضراء -->
+                                <polygon points="228,124 248,124 245,158 231,158" fill="#16a34a" stroke="#14532d" stroke-width="1.5"/>
+                                <path d="M230,124 Q238,116 246,124" fill="#38bdf8"/>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- 3. design (تصميم) -->
+                    <div id="vocab-card-design" data-speak="design" onclick="speakText('design', null, false, 'vocab-card-design')" class="sentence-box clickable-phrase bg-white hover:bg-sky-50/70 rounded-3xl border-2 border-purple-200 hover:border-amber-400 p-4 shadow-md hover:shadow-xl transition-all flex items-center justify-between gap-3 group">
+                        <div class="flex-1 space-y-1.5 text-center">
+                            <div class="flex items-center justify-center gap-2">
+                                <span class="w-7 h-7 rounded-full bg-purple-600 text-white font-black text-xs flex items-center justify-center shrink-0 en-text">3</span>
+                                <span class="w-7 h-7 rounded-full bg-purple-100 text-purple-700 flex items-center justify-center text-xs">
+                                    <i class="fa-solid fa-volume-high"></i>
+                                </span>
+                            </div>
+                            <h2 class="sentence-text en-text text-2xl sm:text-3xl font-black text-slate-900">design</h2>
+                            <p dir="rtl" class="arabic-meaning text-sm sm:text-base font-extrabold text-purple-800 bg-purple-50 inline-block px-3.5 py-0.5 rounded-full border border-purple-200">تصميم</p>
+                        </div>
+                        <div class="w-28 h-24 rounded-2xl bg-white border border-purple-100 p-1 flex items-center justify-center shrink-0 overflow-hidden shadow-inner">
+                            <!-- SVG: Design (مصمم جرافيك على الحاسوب مع لوحة الألوان ورموز التصميم مطابق للصورة 100%) -->
+                            <svg viewBox="0 0 240 205" preserveAspectRatio="xMidYMid meet" class="w-full h-full animate-float group-hover:scale-105 transition-transform">
+                                <!-- لوحة الألوان الفيروزية والمسطرة الوردية خلف الشاشة -->
+                                <ellipse cx="44" cy="40" rx="16" ry="22" fill="#14b8a6" stroke="#1e1b4b" stroke-width="1.5"/>
+                                <circle cx="44" cy="28" r="3" fill="#facc15"/>
+                                <circle cx="38" cy="40" r="3" fill="#fb7185"/>
+                                <circle cx="46" cy="50" r="3" fill="#ffffff"/>
+                                <rect x="64" y="22" width="14" height="44" rx="2" transform="rotate(42 64 22)" fill="#f43f5e"/>
+                                <!-- أيقونات التصميم العلوية Abc و Aa -->
+                                <text x="116" y="32" font-size="12" font-weight="bold" fill="#f43f5e" class="en-text">Abc</text>
+                                <rect x="148" y="16" width="24" height="20" fill="#f59e0b" stroke="#1e1b4b" stroke-width="2"/>
+                                <text x="160" y="31" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff" class="en-text">Aa</text>
+                                <!-- شاشة التصميم الكبيرة -->
+                                <rect x="52" y="42" width="102" height="64" rx="3" fill="#14b8a6" stroke="#1e1b4b" stroke-width="2"/>
+                                <rect x="58" y="48" width="90" height="52" fill="#ffffff"/>
+                                <!-- شعار هندسي داخل الشاشة -->
+                                <circle cx="104" cy="72" r="16" fill="none" stroke="#cbd5e1" stroke-width="1.2"/>
+                                <path d="M104,72 C96,62 88,68 96,78 Z" fill="#f43f5e"/>
+                                <path d="M104,72 C112,60 120,66 112,78 Z" fill="#f59e0b"/>
+                                <!-- قاعدة الشاشة والمكتب -->
+                                <rect x="92" y="106" width="24" height="8" fill="#0d9488"/>
+                                <rect x="20" y="114" width="164" height="7" fill="#f59e0b"/>
+                                <line x1="34" y1="121" x2="34" y2="188" stroke="#1e1b4b" stroke-width="3.5"/>
+                                <line x1="76" y1="121" x2="76" y2="192" stroke="#1e1b4b" stroke-width="3.5"/>
+                                <line x1="34" y1="188" x2="76" y2="192" stroke="#1e1b4b" stroke-width="3.5"/>
+                                <!-- نبتة في أصيص أسفل اليسار -->
+                                <polygon points="30,174 56,174 52,196 34,196" fill="#d97706"/>
+                                <path d="M43,174 L32,152 M43,174 L43,146 M43,174 L56,154" stroke="#14b8a6" stroke-width="4" stroke-linecap="round"/>
+                                <!-- المصمم بقميص وردي وبنطال فيروزي على الكرسي -->
+                                <circle cx="168" cy="56" r="13" fill="#eab308"/>
+                                <path d="M156,52 C156,36 184,36 182,58 C178,66 172,66 168,58 Z" fill="#1e1b4b"/>
+                                <!-- القميص الوردي والذراع -->
+                                <path d="M158,72 C172,68 192,76 192,98 L184,144 L158,134 L162,94 L144,116 L122,114 L122,106 L140,104 Z" fill="#f43f5e"/>
+                                <!-- البنطال الفيروزي والحذاء الكحلي -->
+                                <path d="M158,134 L182,144 L164,154 L166,182 L154,182 L152,154 L138,154 L142,184 L130,184 L124,146 C124,138 142,134 158,134 Z" fill="#14b8a6"/>
+                                <path d="M122,192 L144,186 L146,192 L122,196 Z" fill="#1e1b4b"/>
+                                <!-- الكرسي البرتقالي -->
+                                <polygon points="186,90 222,88 206,150 174,150" fill="#f59e0b" stroke="#1e1b4b" stroke-width="2"/>
+                                <line x1="178" y1="150" x2="178" y2="188" stroke="#1e1b4b" stroke-width="3.5"/>
+                                <ellipse cx="178" cy="190" rx="12" ry="3" fill="#1e1b4b"/>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- 4. Oven (فرن) -->
+                    <div id="vocab-card-oven" data-speak="Oven" onclick="speakText('Oven', null, false, 'vocab-card-oven')" class="sentence-box clickable-phrase bg-white hover:bg-sky-50/70 rounded-3xl border-2 border-amber-200 hover:border-amber-400 p-4 shadow-md hover:shadow-xl transition-all flex items-center justify-between gap-3 group">
+                        <div class="flex-1 space-y-1.5 text-center">
+                            <div class="flex items-center justify-center gap-2">
+                                <span class="w-7 h-7 rounded-full bg-amber-600 text-white font-black text-xs flex items-center justify-center shrink-0 en-text">4</span>
+                                <span class="w-7 h-7 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center text-xs">
+                                    <i class="fa-solid fa-volume-high"></i>
+                                </span>
+                            </div>
+                            <h2 class="sentence-text en-text text-2xl sm:text-3xl font-black text-slate-900">Oven</h2>
+                            <p dir="rtl" class="arabic-meaning text-sm sm:text-base font-extrabold text-amber-800 bg-amber-50 inline-block px-3.5 py-0.5 rounded-full border border-amber-200">فرن</p>
+                        </div>
+                        <div class="w-28 h-24 rounded-2xl bg-white border border-amber-100 p-1 flex items-center justify-center shrink-0 overflow-hidden shadow-inner">
+                            <!-- SVG: Oven (فرن فضي مفتوح الباب وبداخله مخبوزات وصينية خضروات مطابق للصورة 100%) -->
+                            <svg viewBox="0 0 240 215" preserveAspectRatio="xMidYMid meet" class="w-full h-full animate-float-delayed group-hover:scale-105 transition-transform">
+                                <!-- جسم الفرن الفضي -->
+                                <polygon points="18,22 184,22 182,148 34,168 18,144" fill="#e2e8f0" stroke="#1e293b" stroke-width="2.6" stroke-linejoin="round"/>
+                                <!-- لوحة مفاتيح التحكم العلوية -->
+                                <rect x="34" y="32" width="150" height="24" fill="#cbd5e1" stroke="#1e293b" stroke-width="2.2"/>
+                                <circle cx="64" cy="44" r="7" fill="#64748b" stroke="#1e293b" stroke-width="2"/>
+                                <circle cx="114" cy="43" r="7" fill="#64748b" stroke="#1e293b" stroke-width="2"/>
+                                <circle cx="144" cy="42" r="6.5" fill="#64748b" stroke="#1e293b" stroke-width="2"/>
+                                <circle cx="164" cy="41" r="6.5" fill="#64748b" stroke="#1e293b" stroke-width="2"/>
+                                <!-- تجويف الفرن الداخلي -->
+                                <rect x="44" y="62" width="128" height="72" fill="#475569" stroke="#1e293b" stroke-width="2.2"/>
+                                <!-- المخبوزات الذهبية على الرف العلوي -->
+                                <line x1="48" y1="108" x2="168" y2="102" stroke="#cbd5e1" stroke-width="2.5"/>
+                                <ellipse cx="64" cy="96" rx="12" ry="15" transform="rotate(-24 64 96)" fill="#ea580c" stroke="#451a03" stroke-width="1.6"/>
+                                <ellipse cx="86" cy="95" rx="11" ry="14" transform="rotate(-24 86 95)" fill="#f97316" stroke="#451a03" stroke-width="1.6"/>
+                                <ellipse cx="106" cy="93" rx="11" ry="14" transform="rotate(-24 106 93)" fill="#ea580c" stroke="#451a03" stroke-width="1.6"/>
+                                <ellipse cx="126" cy="92" rx="11" ry="14" transform="rotate(-24 126 92)" fill="#f97316" stroke="#451a03" stroke-width="1.6"/>
+                                <ellipse cx="144" cy="90" rx="11" ry="14" transform="rotate(-24 144 90)" fill="#ea580c" stroke="#451a03" stroke-width="1.6"/>
+                                <!-- باب الفرن المفتوح للأمام وصينية الخضروات -->
+                                <polygon points="46,128 168,114 226,144 82,172" fill="#cbd5e1" stroke="#1e293b" stroke-width="2.4" stroke-linejoin="round"/>
+                                <polygon points="56,128 164,116 212,140 86,164" fill="#f8fafc" stroke="#334155" stroke-width="1.8" stroke-linejoin="round"/>
+                                <!-- الطماطم والفلفل الأخضر والأحمر في الصينية -->
+                                <circle cx="76" cy="136" r="8" fill="#ef4444" stroke="#7f1d1d" stroke-width="1.4"/>
+                                <circle cx="92" cy="142" r="9" fill="#dc2626" stroke="#7f1d1d" stroke-width="1.4"/>
+                                <ellipse cx="126" cy="140" rx="8" ry="11" fill="#65a30d" stroke="#1a2e05" stroke-width="1.4"/>
+                                <ellipse cx="144" cy="138" rx="9" ry="13" fill="#4d7c0f" stroke="#1a2e05" stroke-width="1.4"/>
+                                <ellipse cx="186" cy="138" rx="15" ry="9" fill="#65a30d" stroke="#1a2e05" stroke-width="1.4"/>
+                                <path d="M114,154 Q130,152 138,144" fill="none" stroke="#ef4444" stroke-width="4" stroke-linecap="round"/>
+                                <!-- واجهة الباب السفلية والمقبض المعدني -->
+                                <polygon points="82,172 226,144 226,174 82,202" fill="#e2e8f0" stroke="#1e293b" stroke-width="2.4" stroke-linejoin="round"/>
+                                <path d="M108,184 L208,164" stroke="#475569" stroke-width="5" stroke-linecap="round"/>
+                                <path d="M108,183 L208,163" stroke="#f8fafc" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- 5. Apartment layout (تصميم / تخطيط الشقة) -->
+                    <div id="vocab-card-apartment" data-speak="Apartment layout" onclick="speakText('Apartment layout', null, false, 'vocab-card-apartment')" class="sentence-box clickable-phrase bg-white hover:bg-sky-50/70 rounded-3xl border-2 border-teal-200 hover:border-amber-400 p-4 shadow-md hover:shadow-xl transition-all flex items-center justify-between gap-3 group">
+                        <div class="flex-1 space-y-1.5 text-center">
+                            <div class="flex items-center justify-center gap-2">
+                                <span class="w-7 h-7 rounded-full bg-teal-600 text-white font-black text-xs flex items-center justify-center shrink-0 en-text">5</span>
+                                <span class="w-7 h-7 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center text-xs">
+                                    <i class="fa-solid fa-volume-high"></i>
+                                </span>
+                            </div>
+                            <h2 class="sentence-text en-text text-xl sm:text-2xl font-black text-slate-900">Apartment layout</h2>
+                            <p dir="rtl" class="arabic-meaning text-xs sm:text-sm font-extrabold text-teal-800 bg-teal-50 inline-block px-3 py-0.5 rounded-full border border-teal-200">تصميم / تخطيط الشقة</p>
+                        </div>
+                        <div class="w-28 h-24 rounded-2xl bg-white border border-teal-100 p-1 flex items-center justify-center shrink-0 overflow-hidden shadow-inner">
+                            <!-- SVG: Apartment layout (مخطط ثلاثي الأبعاد Isometric فائق الدقة والتفصيل للشقة 100%) -->
+                            <svg viewBox="0 0 260 225" preserveAspectRatio="xMidYMid meet" class="w-full h-full animate-float group-hover:scale-105 transition-transform">
+                                <!-- 1. غرفة النوم العلوية اليسرى (أرضية فيروزية فاتحة وجدران زمردية) -->
+                                <polygon points="14,68 74,34 128,64 68,98" fill="#99f6e4" stroke="#0f766e" stroke-width="1"/>
+                                <polygon points="14,68 74,34 74,78 14,112" fill="#0d9488"/>
+                                <polygon points="74,34 128,64 128,108 74,78" fill="#2dd4bf"/>
+                                <!-- نافذة غرفة النوم بستائر بيضاء -->
+                                <polygon points="34,62 56,50 56,74 34,86" fill="#e0f2fe" stroke="#0f172a" stroke-width="1.2"/>
+                                <line x1="45" y1="56" x2="45" y2="80" stroke="#475569" stroke-width="1"/>
+                                <polygon points="30,60 36,57 36,84 30,87" fill="#fef3c7"/>
+                                <polygon points="54,48 60,45 60,72 54,75" fill="#fef3c7"/>
+                                <!-- السجادة الوردية في غرفة النوم -->
+                                <polygon points="48,76 80,58 106,72 74,90" fill="#fbcfe8"/>
+                                <!-- خزانة الملابس البنية -->
+                                <polygon points="68,46 84,37 94,43 78,52" fill="#b45309"/>
+                                <polygon points="68,46 78,52 78,74 68,68" fill="#92400e"/>
+                                <polygon points="78,52 94,43 94,65 78,74" fill="#d97706"/>
+                                <!-- السرير المزدوج الأخضر مع الوسائد البيضاء -->
+                                <polygon points="72,82 102,65 120,75 90,92" fill="#84cc16" stroke="#3f6212" stroke-width="1.1"/>
+                                <polygon points="94,70 103,65 117,73 108,78" fill="#ffffff"/>
+                                <polygon points="72,82 90,92 90,100 72,90" fill="#9a3412"/>
+                                <polygon points="90,92 120,75 120,83 90,100" fill="#7c2d12"/>
+
+                                <!-- 2. الحمام العلوي الأيمن (أرضية خوخية وجدران زرقاء) -->
+                                <polygon points="128,64 176,37 216,60 168,87" fill="#fed7aa" stroke="#ea580c" stroke-width="0.8"/>
+                                <polygon points="128,64 176,37 176,81 128,108" fill="#0284c7"/>
+                                <polygon points="176,37 216,60 216,104 176,81" fill="#38bdf8"/>
+                                <!-- مغسلة الحمام والمرآة -->
+                                <polygon points="142,64 156,56 156,74 142,82" fill="#e0f2fe" stroke="#0369a1" stroke-width="1"/>
+                                <polygon points="140,84 158,74 166,79 148,89" fill="#d6d3d1"/>
+                                <polygon points="140,84 148,89 148,99 140,94" fill="#78716c"/>
+                                <!-- كابينة الاستحمام الزجاجية الدائرية -->
+                                <path d="M180,58 Q196,50 208,60 L208,98 L180,88 Z" fill="#7dd3fc" opacity="0.85" stroke="#0369a1" stroke-width="1.3"/>
+                                <ellipse cx="194" cy="59" rx="12" ry="5" fill="#bae6fd" stroke="#0284c7" stroke-width="1"/>
+
+                                <!-- 3. الممر الأوسط والصالة الأمامية (أرضية كريمية وجدران خضراء) -->
+                                <polygon points="44,142 128,94 168,117 84,165" fill="#fef08a" stroke="#eab308" stroke-width="0.8"/>
+                                <!-- سجادة الممر الدائرية -->
+                                <ellipse cx="106" cy="129" rx="22" ry="12" transform="rotate(-28 106 129)" fill="#fed7aa" stroke="#fb923c" stroke-width="1"/>
+                                <!-- جدار الممر الأيسر وباب الغرفة -->
+                                <polygon points="44,98 70,83 70,127 44,142" fill="#84cc16"/>
+                                <polygon points="52,106 64,99 64,130 52,137" fill="#d97706" stroke="#78350f" stroke-width="1"/>
+                                <!-- الدراجة الهوائية في الممر -->
+                                <circle cx="80" cy="124" r="5" fill="none" stroke="#1e293b" stroke-width="1.5"/>
+                                <circle cx="94" cy="116" r="5" fill="none" stroke="#1e293b" stroke-width="1.5"/>
+                                <path d="M80,124 L87,115 L94,116 L86,123 Z" fill="none" stroke="#f97316" stroke-width="1.6"/>
+                                <!-- جدار الفاصل الأوسط وباب الصالة -->
+                                <polygon points="112,138 156,113 156,157 112,182" fill="#65a30d"/>
+                                <polygon points="136,134 150,126 150,160 136,168" fill="#d97706" stroke="#78350f" stroke-width="1"/>
+
+                                <!-- 4. غرفة المعيشة اليمنى (أرضية وردية دافئة وجدران نيلية) -->
+                                <polygon points="156,113 196,90 250,121 210,144" fill="#fbcfe8" stroke="#db2777" stroke-width="0.8"/>
+                                <polygon points="156,113 196,90 196,134 156,157" fill="#3730a3"/>
+                                <polygon points="196,90 250,121 250,165 196,134" fill="#1e3a8a"/>
+                                <!-- رفوف الكتب والتلفاز -->
+                                <polygon points="160,118 192,100 195,103 163,121" fill="#d97706"/>
+                                <polygon points="168,124 188,113 188,129 168,140" fill="#38bdf8" stroke="#0f172a" stroke-width="1.3"/>
+                                <polygon points="160,142 194,123 200,127 166,146" fill="#92400e"/>
+                                <!-- أرضية غرفة المعيشة والأريكة والطاولة -->
+                                <polygon points="112,182 156,157 210,188 166,213" fill="#fef9c3" stroke="#eab308" stroke-width="0.8"/>
+                                <polygon points="156,157 196,134 250,165 210,188" fill="#fce7f3"/>
+                                <!-- الأريكة الزرقاء الفاتحة -->
+                                <polygon points="202,168 238,147 246,153 210,174" fill="#94a3b8" stroke="#334155" stroke-width="1.2"/>
+                                <polygon points="202,168 210,174 210,183 202,177" fill="#64748b"/>
+                                <polygon points="210,174 246,153 246,162 210,183" fill="#475569"/>
+                                <!-- الطاولة الدائرية الصغيرة -->
+                                <ellipse cx="192" cy="158" rx="8" ry="4.5" fill="#b45309" stroke="#451a03" stroke-width="1"/>
+                                <line x1="192" y1="162" x2="192" y2="171" stroke="#451a03" stroke-width="2"/>
+                                <!-- الأريكة الأمامية البيضاء -->
+                                <polygon points="128,176 168,199 168,208 128,185" fill="#e2e8f0" stroke="#64748b" stroke-width="1.2"/>
+                                <polygon points="128,176 135,172 175,195 168,199" fill="#ffffff" stroke="#64748b" stroke-width="1"/>
+                                <!-- نباتات زينة خضراء في الزوايا -->
+                                <circle cx="32" cy="84" r="5" fill="#22c55e"/>
+                                <circle cx="72" cy="134" r="5" fill="#16a34a"/>
+                                <circle cx="178" cy="192" r="5.5" fill="#22c55e"/>
+                                <circle cx="222" cy="124" r="4.5" fill="#16a34a"/>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- 6. Fridge (ثلاجة) -->
+                    <div id="vocab-card-fridge" data-speak="Fridge" onclick="speakText('Fridge', null, false, 'vocab-card-fridge')" class="sentence-box clickable-phrase bg-white hover:bg-sky-50/70 rounded-3xl border-2 border-cyan-200 hover:border-amber-400 p-4 shadow-md hover:shadow-xl transition-all flex items-center justify-between gap-3 group">
+                        <div class="flex-1 space-y-1.5 text-center">
+                            <div class="flex items-center justify-center gap-2">
+                                <span class="w-7 h-7 rounded-full bg-cyan-600 text-white font-black text-xs flex items-center justify-center shrink-0 en-text">6</span>
+                                <span class="w-7 h-7 rounded-full bg-cyan-100 text-cyan-700 flex items-center justify-center text-xs">
+                                    <i class="fa-solid fa-volume-high"></i>
+                                </span>
+                            </div>
+                            <h2 class="sentence-text en-text text-2xl sm:text-3xl font-black text-slate-900">Fridge</h2>
+                            <p dir="rtl" class="arabic-meaning text-sm sm:text-base font-extrabold text-cyan-800 bg-cyan-50 inline-block px-3.5 py-0.5 rounded-full border border-cyan-200">ثلاجة</p>
+                        </div>
+                        <div class="w-28 h-24 rounded-2xl bg-white border border-cyan-100 p-1 flex items-center justify-center shrink-0 overflow-hidden shadow-inner">
+                            <!-- SVG: Fridge (ثلاجة زرقاء مفتوحة الباب ومليئة بالأطعمة والمشروبات على خلفية بيضاء نقية مطابق للصورة 100%) -->
+                            <svg viewBox="0 0 230 225" preserveAspectRatio="xMidYMid meet" class="w-full h-full animate-float-delayed group-hover:scale-105 transition-transform">
+                                <defs>
+                                    <linearGradient id="openBlueFridge16" x1="0" y1="0" x2="1" y2="1">
+                                        <stop offset="0%" stop-color="#93c5fd"/>
+                                        <stop offset="50%" stop-color="#60a5fa"/>
+                                        <stop offset="100%" stop-color="#3b82f6"/>
+                                    </linearGradient>
+                                    <linearGradient id="fridgeInsideLight16" x1="0" y1="0" x2="0" y2="1">
+                                        <stop offset="0%" stop-color="#e0f2fe"/>
+                                        <stop offset="100%" stop-color="#bae6fd"/>
+                                    </linearGradient>
+                                </defs>
+                                <!-- الظل الأرضي للثلاجة -->
+                                <polygon points="18,204 66,218 158,204 120,192" fill="#cbd5e1"/>
+                                <!-- الجانب الأيسر للثلاجة الزرقاء -->
+                                <polygon points="22,26 66,18 66,214 22,200" fill="url(#openBlueFridge16)" stroke="#1d4ed8" stroke-width="2" stroke-linejoin="round"/>
+                                <!-- واجهة جسم الثلاجة المفتوحة -->
+                                <rect x="66" y="18" width="84" height="196" rx="4" fill="url(#openBlueFridge16)" stroke="#1d4ed8" stroke-width="2"/>
+                                <!-- التجويف الداخلي المضيء -->
+                                <rect x="74" y="28" width="68" height="174" rx="3" fill="url(#fridgeInsideLight16)" stroke="#38bdf8" stroke-width="1.5"/>
+                                <!-- الرف الأول: مرطبان أخضر وفلفل أحمر -->
+                                <line x1="74" y1="68" x2="142" y2="68" stroke="#7dd3fc" stroke-width="3"/>
+                                <rect x="78" y="38" width="14" height="28" rx="2" fill="#22c55e" stroke="#15803d" stroke-width="1.2"/>
+                                <ellipse cx="116" cy="56" rx="14" ry="8" transform="rotate(-15 116 56)" fill="#ef4444"/>
+                                <ellipse cx="130" cy="58" rx="11" ry="7" fill="#dc2626"/>
+                                <!-- الرف الثاني: مرطبانات طعام وطماطم -->
+                                <line x1="74" y1="108" x2="142" y2="108" stroke="#7dd3fc" stroke-width="3"/>
+                                <rect x="88" y="80" width="22" height="26" rx="4" fill="#f59e0b" stroke="#b45309" stroke-width="1.2"/>
+                                <rect x="116" y="84" width="18" height="22" rx="3" fill="#fde047" stroke="#ca8a04" stroke-width="1.2"/>
+                                <circle cx="112" cy="103" r="3.5" fill="#ef4444"/>
+                                <circle cx="120" cy="103" r="3.5" fill="#dc2626"/>
+                                <!-- الرف الثالث: خس أخضر وخبز -->
+                                <line x1="74" y1="146" x2="142" y2="146" stroke="#7dd3fc" stroke-width="3"/>
+                                <ellipse cx="92" cy="134" rx="15" ry="7" transform="rotate(24 92 134)" fill="#d6d3d1" stroke="#78716c" stroke-width="1.2"/>
+                                <ellipse cx="120" cy="134" rx="18" ry="10" fill="#22c55e"/>
+                                <!-- الدرج السفلي: زجاجتان حمراوان ونصف برتقالة -->
+                                <rect x="78" y="152" width="60" height="46" rx="3" fill="#e0f2fe" opacity="0.7" stroke="#38bdf8" stroke-width="1.5"/>
+                                <rect x="82" y="168" width="12" height="28" rx="4" fill="#dc2626"/>
+                                <rect x="98" y="168" width="12" height="28" rx="4" fill="#ef4444"/>
+                                <circle cx="124" cy="186" r="10" fill="#f97316" stroke="#fef08a" stroke-width="2"/>
+                                <!-- باب الثلاجة المفتوح على اليمين مع الرفوف والزجاجات -->
+                                <polygon points="150,24 206,30 206,204 150,210" fill="url(#openBlueFridge16)" stroke="#1d4ed8" stroke-width="2" stroke-linejoin="round"/>
+                                <rect x="156" y="34" width="42" height="164" rx="3" fill="#e0f2fe"/>
+                                <!-- مقبض الباب الأيمن -->
+                                <path d="M208,84 C216,102 216,132 208,150" fill="none" stroke="#60a5fa" stroke-width="5" stroke-linecap="round"/>
+                                <!-- رفوف الباب والزجاجات -->
+                                <rect x="162" y="54" width="12" height="30" rx="3" fill="#bae6fd" stroke="#0284c7" stroke-width="1.2"/>
+                                <rect x="180" y="58" width="12" height="26" rx="3" fill="#38bdf8"/>
+                                <rect x="154" y="76" width="46" height="10" rx="2" fill="#93c5fd" stroke="#2563eb" stroke-width="1.2"/>
+                                <rect x="164" y="104" width="11" height="22" rx="3" fill="#4ade80"/>
+                                <rect x="179" y="106" width="11" height="20" rx="3" fill="#22c55e"/>
+                                <rect x="154" y="120" width="46" height="10" rx="2" fill="#93c5fd" stroke="#2563eb" stroke-width="1.2"/>
+                                <rect x="166" y="148" width="16" height="28" rx="3" fill="#ef4444"/>
+                                <rect x="154" y="168" width="46" height="12" rx="2" fill="#93c5fd" stroke="#2563eb" stroke-width="1.2"/>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- 7. Materials (خامات / أدوات) -->
+                    <div id="vocab-card-materials" data-speak="Materials" onclick="speakText('Materials', null, false, 'vocab-card-materials')" class="sentence-box clickable-phrase bg-white hover:bg-sky-50/70 rounded-3xl border-2 border-orange-200 hover:border-amber-400 p-4 shadow-md hover:shadow-xl transition-all flex items-center justify-between gap-3 group">
+                        <div class="flex-1 space-y-1.5 text-center">
+                            <div class="flex items-center justify-center gap-2">
+                                <span class="w-7 h-7 rounded-full bg-orange-600 text-white font-black text-xs flex items-center justify-center shrink-0 en-text">7</span>
+                                <span class="w-7 h-7 rounded-full bg-orange-100 text-orange-700 flex items-center justify-center text-xs">
+                                    <i class="fa-solid fa-volume-high"></i>
+                                </span>
+                            </div>
+                            <h2 class="sentence-text en-text text-2xl sm:text-3xl font-black text-slate-900">Materials</h2>
+                            <p dir="rtl" class="arabic-meaning text-xs sm:text-sm font-extrabold text-orange-800 bg-orange-50 inline-block px-3 py-0.5 rounded-full border border-orange-200">خامات / أدوات</p>
+                        </div>
+                        <div class="w-28 h-24 rounded-2xl bg-white border border-orange-100 p-1 flex items-center justify-center shrink-0 overflow-hidden shadow-inner">
+                            <!-- SVG: Materials (أدوات وخامات فنية: علبة ألوان مائية، زجاجات طلاء، أقلام رصاص، وفرشاة مطابق للصورة 100%) -->
+                            <svg viewBox="0 0 320 210" preserveAspectRatio="xMidYMid meet" class="w-full h-full animate-float group-hover:scale-105 transition-transform">
+                                <!-- قلم الرصاص الأصفر الطويل على اليسار -->
+                                <g transform="rotate(-22 44 106)">
+                                    <rect x="34" y="54" width="20" height="114" rx="2" fill="#facc15" stroke="#1e293b" stroke-width="3"/>
+                                    <line x1="40" y1="60" x2="40" y2="160" stroke="#eab308" stroke-width="2"/>
+                                    <line x1="48" y1="60" x2="48" y2="160" stroke="#eab308" stroke-width="2"/>
+                                    <polygon points="34,54 44,24 54,54" fill="#fde68a" stroke="#1e293b" stroke-width="3" stroke-linejoin="round"/>
+                                    <polygon points="40,36 44,24 48,36" fill="#4c1d95" stroke="#1e293b" stroke-width="2"/>
+                                </g>
+
+                                <!-- زجاجة الطلاء الخضراء ذات الغطاء الأحمر أقصى اليسار -->
+                                <g transform="rotate(-26 42 150)">
+                                    <rect x="24" y="106" width="38" height="74" rx="14" fill="#16a34a" stroke="#1e293b" stroke-width="3.2"/>
+                                    <rect x="24" y="162" width="38" height="18" rx="6" fill="#bae6fd" stroke="#1e293b" stroke-width="3"/>
+                                    <rect x="28" y="96" width="30" height="12" rx="4" fill="#38bdf8" stroke="#1e293b" stroke-width="2.8"/>
+                                    <path d="M31,96 L31,82 C31,74 55,74 55,82 L55,96 Z" fill="#dc2626" stroke="#1e293b" stroke-width="3"/>
+                                    <ellipse cx="35" cy="134" rx="4" ry="16" fill="#86efac" opacity="0.6"/>
+                                </g>
+
+                                <!-- اللوحة الزرقاء المرقطة مع المقبض الخشبي خلف علبة الألوان -->
+                                <g transform="rotate(-11 102 82)">
+                                    <rect x="86" y="18" width="32" height="44" rx="4" fill="#b47b56" stroke="#1e293b" stroke-width="3"/>
+                                    <circle cx="102" cy="38" r="8" fill="#facc15" stroke="#1e293b" stroke-width="2"/>
+                                    <polygon points="68,58 136,58 130,114 74,114" fill="#38bdf8" stroke="#1e293b" stroke-width="3.2" stroke-linejoin="round"/>
+                                    <circle cx="88" cy="84" r="10" fill="#0284c7" stroke="#1e293b" stroke-width="2"/>
+                                    <circle cx="114" cy="94" r="9" fill="#facc15" stroke="#1e293b" stroke-width="2"/>
+                                    <circle cx="104" cy="70" r="4.5" fill="#f97316" stroke="#1e293b" stroke-width="1.6"/>
+                                    <circle cx="122" cy="76" r="4.5" fill="#f43f5e" stroke="#1e293b" stroke-width="1.6"/>
+                                </g>
+
+                                <!-- الزجاجة الحمراء الكبيرة بغطاء أصفر في المنتصف -->
+                                <path d="M142,58 C142,42 152,34 156,30 L172,30 C176,34 186,42 186,58 L186,114 L142,114 Z" fill="#ffffff" stroke="#1e293b" stroke-width="3.2" stroke-linejoin="round"/>
+                                <rect x="142" y="58" width="44" height="56" fill="#ef4444" stroke="#1e293b" stroke-width="3.2"/>
+                                <rect x="155" y="14" width="18" height="16" rx="4" fill="#facc15" stroke="#1e293b" stroke-width="3"/>
+                                <path d="M146,74 L158,74 M146,84 L158,84 M146,94 L158,94" stroke="#991b1b" stroke-width="2.5" stroke-linecap="round"/>
+
+                                <!-- زجاجة القطّارة الحمراء والرمادية على اليمين -->
+                                <rect x="196" y="74" width="42" height="52" rx="8" fill="#ffffff" stroke="#1e293b" stroke-width="3.2"/>
+                                <rect x="196" y="92" width="42" height="32" fill="#ef4444" stroke="#1e293b" stroke-width="2.6"/>
+                                <rect x="192" y="64" width="50" height="10" rx="4" fill="#cbd5e1" stroke="#1e293b" stroke-width="3"/>
+                                <path d="M210,64 L210,44 C210,36 224,36 224,44 L224,64 Z" fill="#64748b" stroke="#1e293b" stroke-width="3"/>
+
+                                <!-- قلم الرصاص البرتقالي الطويل على اليمين -->
+                                <g transform="rotate(22 272 108)">
+                                    <rect x="262" y="54" width="20" height="114" rx="2" fill="#ea580c" stroke="#1e293b" stroke-width="3"/>
+                                    <line x1="274" y1="74" x2="282" y2="74" stroke="#1e293b" stroke-width="2"/>
+                                    <line x1="274" y1="92" x2="282" y2="92" stroke="#1e293b" stroke-width="2"/>
+                                    <polygon points="262,54 272,24 282,54" fill="#fde68a" stroke="#1e293b" stroke-width="3" stroke-linejoin="round"/>
+                                    <polygon points="268,36 272,24 276,36" fill="#0284c7" stroke="#1e293b" stroke-width="2"/>
+                                </g>
+
+                                <!-- فرشاة الرسم الطويلة ذات الرأس الأصفر -->
+                                <rect x="242" y="62" width="9" height="132" rx="4.5" fill="#9a5632" stroke="#1e293b" stroke-width="2.8"/>
+                                <rect x="240" y="50" width="13" height="14" rx="2" fill="#bae6fd" stroke="#1e293b" stroke-width="2.6"/>
+                                <path d="M241,50 C234,40 236,24 246,16 C256,24 258,40 252,50 Z" fill="#facc15" stroke="#1e293b" stroke-width="2.8" stroke-linejoin="round"/>
+
+                                <!-- علبة الألوان المائية الرمادية في المقدمة -->
+                                <rect x="74" y="112" width="156" height="82" rx="10" fill="#94a3b8" stroke="#1e293b" stroke-width="3.4"/>
+                                <!-- مربعات الألوان العلوية داخل العلبة -->
+                                <rect x="76" y="114" width="24" height="26" fill="#ea580c" stroke="#1e293b" stroke-width="2"/>
+                                <rect x="100" y="114" width="24" height="26" fill="#84cc16" stroke="#1e293b" stroke-width="2"/>
+                                <rect x="124" y="114" width="24" height="26" fill="#ffffff" stroke="#1e293b" stroke-width="2"/>
+                                <rect x="124" y="132" width="24" height="8" fill="#facc15"/>
+                                <rect x="148" y="114" width="24" height="26" fill="#fdba74" stroke="#1e293b" stroke-width="2"/>
+                                <rect x="148" y="132" width="24" height="8" fill="#ef4444"/>
+                                <rect x="172" y="114" width="24" height="26" fill="#ffffff" stroke="#1e293b" stroke-width="2"/>
+                                <rect x="172" y="132" width="24" height="8" fill="#38bdf8"/>
+                                <rect x="196" y="114" width="24" height="26" fill="#22c55e" stroke="#1e293b" stroke-width="2"/>
+                                <!-- فتحتا الأصابع البيضاويتان الزرقاوان في العلبة -->
+                                <ellipse cx="118" cy="166" rx="20" ry="10" fill="#0284c7" stroke="#1e293b" stroke-width="2.8"/>
+                                <ellipse cx="182" cy="166" rx="20" ry="10" fill="#0284c7" stroke="#1e293b" stroke-width="2.8"/>
+
+                                <!-- زجاجة الحبر الفيروزية بغطاء وردي في الأمام اليمين -->
+                                <rect x="204" y="136" width="36" height="58" rx="8" fill="#0d9488" stroke="#1e293b" stroke-width="3.2"/>
+                                <rect x="204" y="136" width="36" height="12" fill="#ffffff" stroke="#1e293b" stroke-width="2.4"/>
+                                <rect x="208" y="122" width="28" height="14" rx="3" fill="#ffffff" stroke="#1e293b" stroke-width="2.6"/>
+                                <rect x="210" y="110" width="24" height="12" rx="3" fill="#e11d48" stroke="#1e293b" stroke-width="2.6"/>
+
+                                <!-- أنبوب الغراء / أداة التحديد الصفراء أقصى اليمين -->
+                                <g transform="rotate(24 274 156)">
+                                    <rect x="260" y="124" width="28" height="68" rx="8" fill="#facc15" stroke="#1e293b" stroke-width="3"/>
+                                    <circle cx="274" cy="148" r="6" fill="#ea580c" stroke="#1e293b" stroke-width="2"/>
+                                    <circle cx="274" cy="168" r="6" fill="#ea580c" stroke="#1e293b" stroke-width="2"/>
+                                    <rect x="266" y="112" width="16" height="12" rx="2" fill="#0d9488" stroke="#1e293b" stroke-width="2.6"/>
+                                    <rect x="272" y="80" width="4" height="32" rx="2" fill="#bae6fd" stroke="#1e293b" stroke-width="2"/>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- 8. Entrance (مدخل) -->
+                    <div id="vocab-card-entrance" data-speak="Entrance" onclick="speakText('Entrance', null, false, 'vocab-card-entrance')" class="sentence-box clickable-phrase bg-white hover:bg-sky-50/70 rounded-3xl border-2 border-emerald-200 hover:border-amber-400 p-4 shadow-md hover:shadow-xl transition-all flex items-center justify-between gap-3 group">
+                        <div class="flex-1 space-y-1.5 text-center">
+                            <div class="flex items-center justify-center gap-2">
+                                <span class="w-7 h-7 rounded-full bg-emerald-600 text-white font-black text-xs flex items-center justify-center shrink-0 en-text">8</span>
+                                <span class="w-7 h-7 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-xs">
+                                    <i class="fa-solid fa-volume-high"></i>
+                                </span>
+                            </div>
+                            <h2 class="sentence-text en-text text-2xl sm:text-3xl font-black text-slate-900">Entrance</h2>
+                            <p dir="rtl" class="arabic-meaning text-sm sm:text-base font-extrabold text-emerald-800 bg-emerald-50 inline-block px-3.5 py-0.5 rounded-full border border-emerald-200">مدخل</p>
+                        </div>
+                        <div class="w-28 h-24 rounded-2xl bg-white border border-emerald-100 p-1 flex items-center justify-center shrink-0 overflow-hidden shadow-inner">
+                            <!-- SVG: Entrance (مدخل حجري مقوس لحديقة خضراء مع أعمدة إنارة وأشجار وسياج مطابق للصورة 100%) -->
+                            <svg viewBox="0 0 280 200" preserveAspectRatio="xMidYMid meet" class="w-full h-full animate-float-delayed group-hover:scale-105 transition-transform">
+                                <!-- السماء والتلال الخضراء في الخلفية -->
+                                <rect x="0" y="0" width="280" height="125" fill="#ecfccb"/>
+                                <rect x="95" y="0" width="90" height="60" fill="#bae6fd"/>
+                                <!-- الأشجار الكبيرة على الجانبين -->
+                                <circle cx="30" cy="36" r="44" fill="#84cc16"/>
+                                <circle cx="68" cy="44" r="36" fill="#65a30d"/>
+                                <circle cx="250" cy="36" r="44" fill="#84cc16"/>
+                                <circle cx="212" cy="44" r="36" fill="#65a30d"/>
+                                <!-- جذوع الأشجار وفروعها -->
+                                <path d="M12,140 L14,82 L-2,60 M14,82 L36,54" fill="none" stroke="#5c3a21" stroke-width="6" stroke-linecap="round"/>
+                                <path d="M268,140 L266,82 L282,60 M266,82 L244,54" fill="none" stroke="#5c3a21" stroke-width="6" stroke-linecap="round"/>
+                                <!-- المروج الخضراء -->
+                                <path d="M0,104 Q70,96 140,106 Q210,92 280,102 L280,130 L0,130 Z" fill="#bef264"/>
+                                <!-- الممر الرملي الأرضي -->
+                                <rect x="0" y="122" width="280" height="58" fill="#fcd34d"/>
+                                <rect x="0" y="176" width="280" height="24" fill="#d6d3d1"/>
+                                <!-- السياج الحديدي على الجانبين -->
+                                <g stroke="#334155" stroke-width="2">
+                                    <line x1="0" y1="128" x2="78" y2="128"/>
+                                    <line x1="0" y1="142" x2="78" y2="142"/>
+                                    <line x1="16" y1="118" x2="16" y2="152"/>
+                                    <line x1="36" y1="118" x2="36" y2="152"/>
+                                    <line x1="56" y1="118" x2="56" y2="152"/>
+                                    <line x1="202" y1="128" x2="280" y2="128"/>
+                                    <line x1="202" y1="142" x2="280" y2="142"/>
+                                    <line x1="224" y1="118" x2="224" y2="152"/>
+                                    <line x1="244" y1="118" x2="244" y2="152"/>
+                                    <line x1="264" y1="118" x2="264" y2="152"/>
+                                </g>
+                                <!-- بوابة المدخل الحجرية الضخمة (العمودان والعارضة العلوية) -->
+                                <rect x="78" y="54" width="26" height="98" fill="#57534e" stroke="#292524" stroke-width="2"/>
+                                <rect x="74" y="44" width="34" height="12" fill="#78716c" stroke="#292524" stroke-width="2"/>
+                                <rect x="176" y="54" width="26" height="98" fill="#57534e" stroke="#292524" stroke-width="2"/>
+                                <rect x="172" y="44" width="34" height="12" fill="#78716c" stroke="#292524" stroke-width="2"/>
+                                <!-- أحجار دائرية على العمودين -->
+                                <ellipse cx="91" cy="74" rx="7" ry="10" fill="#78716c"/>
+                                <ellipse cx="91" cy="102" rx="8" ry="11" fill="#78716c"/>
+                                <ellipse cx="91" cy="130" rx="7" ry="10" fill="#78716c"/>
+                                <ellipse cx="189" cy="74" rx="7" ry="10" fill="#78716c"/>
+                                <ellipse cx="189" cy="102" rx="8" ry="11" fill="#78716c"/>
+                                <ellipse cx="189" cy="130" rx="7" ry="10" fill="#78716c"/>
+                                <!-- العارضة الحجرية العلوية للمدخل -->
+                                <rect x="68" y="20" width="144" height="28" fill="#57534e" stroke="#292524" stroke-width="2"/>
+                                <polygon points="122,12 158,12 152,38 128,38" fill="#78716c" stroke="#292524" stroke-width="2"/>
+                                <circle cx="90" cy="34" r="8" fill="#78716c" stroke="#292524" stroke-width="1.5"/>
+                                <circle cx="190" cy="34" r="8" fill="#78716c" stroke="#292524" stroke-width="1.5"/>
+                                <!-- عمودا الإنارة بمصابيح صفراء متوهجة -->
+                                <rect x="46" y="138" width="10" height="20" fill="#1e293b"/>
+                                <line x1="51" y1="68" x2="51" y2="138" stroke="#1e293b" stroke-width="3.5"/>
+                                <circle cx="51" cy="60" r="8" fill="#facc15" stroke="#ca8a04" stroke-width="1.5"/>
+                                <rect x="224" y="138" width="10" height="20" fill="#1e293b"/>
+                                <line x1="229" y1="68" x2="229" y2="138" stroke="#1e293b" stroke-width="3.5"/>
+                                <circle cx="229" cy="60" r="8" fill="#facc15" stroke="#ca8a04" stroke-width="1.5"/>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- 9. Key (مفتاح) -->
+                    <div id="vocab-card-key" data-speak="Key" onclick="speakText('Key', null, false, 'vocab-card-key')" class="sentence-box clickable-phrase bg-white hover:bg-sky-50/70 rounded-3xl border-2 border-sky-200 hover:border-amber-400 p-4 shadow-md hover:shadow-xl transition-all flex items-center justify-between gap-3 group">
+                        <div class="flex-1 space-y-1.5 text-center">
+                            <div class="flex items-center justify-center gap-2">
+                                <span class="w-7 h-7 rounded-full bg-sky-600 text-white font-black text-xs flex items-center justify-center shrink-0 en-text">9</span>
+                                <span class="w-7 h-7 rounded-full bg-sky-100 text-sky-700 flex items-center justify-center text-xs">
+                                    <i class="fa-solid fa-volume-high"></i>
+                                </span>
+                            </div>
+                            <h2 class="sentence-text en-text text-2xl sm:text-3xl font-black text-slate-900">Key</h2>
+                            <p dir="rtl" class="arabic-meaning text-sm sm:text-base font-extrabold text-sky-800 bg-sky-50 inline-block px-3.5 py-0.5 rounded-full border border-sky-200">مفتاح</p>
+                        </div>
+                        <div class="w-28 h-24 rounded-2xl bg-white border border-sky-100 p-1 flex items-center justify-center shrink-0 overflow-hidden shadow-inner">
+                            <!-- SVG: Keys (حلقة مفاتيح ملونة: كريمي، برتقالي، أخضر، وفيروزي مطابق للصورة 100%) -->
+                            <svg viewBox="0 0 220 225" preserveAspectRatio="xMidYMid meet" class="w-full h-full animate-float group-hover:scale-105 transition-transform">
+                                <!-- 1. المفتاح الكريمي الأيسر -->
+                                <g transform="rotate(42 86 92)">
+                                    <circle cx="86" cy="72" r="26" fill="#fef08a" stroke="#0f172a" stroke-width="4.5"/>
+                                    <path d="M76,96 L76,174 L86,184 L96,174 L96,154 L90,148 L96,142 L96,132 L90,126 L96,120 L96,96 Z" fill="#fef08a" stroke="#0f172a" stroke-width="4.5" stroke-linejoin="round"/>
+                                    <line x1="84" y1="104" x2="84" y2="174" stroke="#eab308" stroke-width="4"/>
+                                </g>
+
+                                <!-- 2. المفتاح البرتقالي -->
+                                <g transform="rotate(22 104 94)">
+                                    <circle cx="104" cy="74" r="28" fill="#f59e0b" stroke="#0f172a" stroke-width="4.5"/>
+                                    <path d="M93,100 L93,186 L104,196 L115,186 L115,100 Z" fill="#f59e0b" stroke="#0f172a" stroke-width="4.5" stroke-linejoin="round"/>
+                                    <line x1="101" y1="106" x2="101" y2="188" stroke="#ea580c" stroke-width="4"/>
+                                    <rect x="106" y="150" width="7" height="10" fill="#ea580c"/>
+                                    <rect x="106" y="164" width="7" height="10" fill="#ea580c"/>
+                                </g>
+
+                                <!-- 3. المفتاح الأخضر -->
+                                <g transform="rotate(-10 116 98)">
+                                    <circle cx="116" cy="76" r="28" fill="#22c55e" stroke="#0f172a" stroke-width="4.5"/>
+                                    <path d="M105,102 L105,146 L98,152 L105,158 L98,164 L105,170 L98,176 L105,182 L105,192 L116,202 L127,192 L127,102 Z" fill="#22c55e" stroke="#0f172a" stroke-width="4.5" stroke-linejoin="round"/>
+                                    <line x1="115" y1="108" x2="115" y2="194" stroke="#15803d" stroke-width="4"/>
+                                </g>
+
+                                <!-- 4. المفتاح الفيروزي الأمامي الكبير -->
+                                <g transform="rotate(-26 128 88)">
+                                    <circle cx="128" cy="74" r="32" fill="#38bdf8" stroke="#0369a1" stroke-width="5"/>
+                                    <path d="M116,104 L116,196 L128,208 L140,196 L140,104 Z" fill="#38bdf8" stroke="#0f172a" stroke-width="4.5" stroke-linejoin="round"/>
+                                    <line x1="124" y1="110" x2="124" y2="198" stroke="#0284c7" stroke-width="4.5"/>
+                                    <rect x="130" y="156" width="8" height="11" fill="#0369a1"/>
+                                    <rect x="130" y="172" width="8" height="11" fill="#0369a1"/>
+                                    <circle cx="124" cy="64" r="9" fill="#ffffff" stroke="#0f172a" stroke-width="2.5"/>
+                                </g>
+
+                                <!-- الحلقة الدائرية العلوية المجمّعة للمفاتيح -->
+                                <path d="M114,66 A28,28 0 1,1 132,48" fill="none" stroke="#0284c7" stroke-width="8" stroke-linecap="round"/>
+                                <path d="M114,66 A28,28 0 1,1 132,48" fill="none" stroke="#fef08a" stroke-width="3" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- 10. Gate (بوابة) -->
+                    <div id="vocab-card-gate" data-speak="Gate" onclick="speakText('Gate', null, false, 'vocab-card-gate')" class="sentence-box clickable-phrase bg-white hover:bg-sky-50/70 rounded-3xl border-2 border-stone-300 hover:border-amber-400 p-4 shadow-md hover:shadow-xl transition-all flex items-center justify-between gap-3 group">
+                        <div class="flex-1 space-y-1.5 text-center">
+                            <div class="flex items-center justify-center gap-2">
+                                <span class="w-7 h-7 rounded-full bg-stone-700 text-white font-black text-xs flex items-center justify-center shrink-0 en-text">10</span>
+                                <span class="w-7 h-7 rounded-full bg-stone-100 text-stone-700 flex items-center justify-center text-xs">
+                                    <i class="fa-solid fa-volume-high"></i>
+                                </span>
+                            </div>
+                            <h2 class="sentence-text en-text text-2xl sm:text-3xl font-black text-slate-900">Gate</h2>
+                            <p dir="rtl" class="arabic-meaning text-sm sm:text-base font-extrabold text-stone-800 bg-stone-100 inline-block px-3.5 py-0.5 rounded-full border border-stone-300">بوابة</p>
+                        </div>
+                        <div class="w-28 h-24 rounded-2xl bg-white border border-stone-200 p-1 flex items-center justify-center shrink-0 overflow-hidden shadow-inner">
+                            <!-- SVG: Gate (بوابة حديدية مقوسة فخمة بين عمودين من الطوب الأحمر ومصباحين مطابق للصورة 100%) -->
+                            <svg viewBox="0 0 240 215" preserveAspectRatio="xMidYMid meet" class="w-full h-full animate-float-delayed group-hover:scale-105 transition-transform">
+                                <!-- العمود الأيسر من الطوب الأحمر وقاعدته -->
+                                <rect x="14" y="68" width="38" height="126" fill="#c25934" stroke="#1c1917" stroke-width="2.5"/>
+                                <rect x="11" y="62" width="44" height="8" rx="2" fill="#ea580c" stroke="#1c1917" stroke-width="2.2"/>
+                                <rect x="10" y="192" width="46" height="10" rx="3" fill="#78716c" stroke="#1c1917" stroke-width="2.4"/>
+                                <!-- خطوط الطوب على العمود الأيسر -->
+                                <path d="M14,82 L52,82 M14,96 L52,96 M14,110 L52,110 M14,124 L52,124 M14,138 L52,138 M14,152 L52,152 M14,166 L52,166 M14,180 L52,180" stroke="#7c2d12" stroke-width="1.5"/>
+                                <path d="M32,68 L32,82 M24,82 L24,96 M40,82 L40,96 M32,96 L32,110 M24,110 L24,124 M40,110 L40,124 M32,124 L32,138 M24,138 L24,152 M40,138 L40,152" stroke="#7c2d12" stroke-width="1.4"/>
+                                <!-- المصباح الكلاسيكي أعلى العمود الأيسر -->
+                                <rect x="24" y="54" width="18" height="8" fill="#57534e" stroke="#1c1917" stroke-width="2"/>
+                                <polygon points="22,30 44,30 40,54 26,54" fill="#fef3c7" stroke="#1c1917" stroke-width="2.2"/>
+                                <path d="M18,30 Q33,14 48,30 Z" fill="#78716c" stroke="#1c1917" stroke-width="2.2"/>
+
+                                <!-- العمود الأيمن من الطوب الأحمر وقاعدته -->
+                                <rect x="188" y="68" width="38" height="126" fill="#c25934" stroke="#1c1917" stroke-width="2.5"/>
+                                <rect x="185" y="62" width="44" height="8" rx="2" fill="#ea580c" stroke="#1c1917" stroke-width="2.2"/>
+                                <rect x="184" y="192" width="46" height="10" rx="3" fill="#78716c" stroke="#1c1917" stroke-width="2.4"/>
+                                <path d="M188,82 L226,82 M188,96 L226,96 M188,110 L226,110 M188,124 L226,124 M188,138 L226,138 M188,152 L226,152 M188,166 L226,166 M188,180 L226,180" stroke="#7c2d12" stroke-width="1.5"/>
+                                <path d="M206,68 L206,82 M198,82 L198,96 M214,82 L214,96 M206,96 L206,110 M198,110 L198,124 M214,110 L214,124 M206,124 L206,138 M198,138 L198,152 M214,138 L214,152" stroke="#7c2d12" stroke-width="1.4"/>
+                                <!-- المصباح الكلاسيكي أعلى العمود الأيمن -->
+                                <rect x="198" y="54" width="18" height="8" fill="#57534e" stroke="#1c1917" stroke-width="2"/>
+                                <polygon points="196,30 218,30 214,54 200,54" fill="#fef3c7" stroke="#1c1917" stroke-width="2.2"/>
+                                <path d="M192,30 Q207,14 222,30 Z" fill="#78716c" stroke="#1c1917" stroke-width="2.2"/>
+
+                                <!-- قوس البوابة الحديدية المزدوجة والقضبان الرأسية -->
+                                <path d="M56,82 C56,38 96,24 120,24 C144,24 184,38 184,82 L184,192 L56,192 Z" fill="none" stroke="#44403c" stroke-width="6"/>
+                                <path d="M62,84 C62,44 98,30 120,30 C142,30 178,44 178,84" fill="none" stroke="#1c1917" stroke-width="2.5"/>
+                                <!-- الحلية العلوية في قمة القوس -->
+                                <circle cx="120" cy="18" r="4.5" fill="#57534e" stroke="#1c1917" stroke-width="2"/>
+                                <!-- العمود الأوسط للبوابة -->
+                                <line x1="120" y1="24" x2="120" y2="192" stroke="#1c1917" stroke-width="4.5"/>
+                                <!-- القضبان الحديدية الرأسية -->
+                                <g stroke="#292524" stroke-width="2.2">
+                                    <line x1="72" y1="54" x2="72" y2="162"/>
+                                    <line x1="84" y1="42" x2="84" y2="162"/>
+                                    <line x1="96" y1="35" x2="96" y2="162"/>
+                                    <line x1="108" y1="31" x2="108" y2="162"/>
+                                    <line x1="132" y1="31" x2="132" y2="162"/>
+                                    <line x1="144" y1="35" x2="144" y2="162"/>
+                                    <line x1="156" y1="42" x2="156" y2="162"/>
+                                    <line x1="168" y1="54" x2="168" y2="162"/>
+                                </g>
+                                <!-- الجزء السفلي المزخرف للبوابة -->
+                                <rect x="58" y="162" width="124" height="30" fill="none" stroke="#44403c" stroke-width="4.5"/>
+                                <g fill="none" stroke="#292524" stroke-width="2.2">
+                                    <rect x="66" y="168" width="8" height="18" rx="4"/>
+                                    <rect x="78" y="168" width="8" height="18" rx="4"/>
+                                    <rect x="90" y="168" width="8" height="18" rx="4"/>
+                                    <rect x="102" y="168" width="8" height="18" rx="4"/>
+                                    <rect x="130" y="168" width="8" height="18" rx="4"/>
+                                    <rect x="142" y="168" width="8" height="18" rx="4"/>
+                                    <rect x="154" y="168" width="8" height="18" rx="4"/>
+                                    <rect x="166" y="168" width="8" height="18" rx="4"/>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- 11. Screen (شاشة) -->
+                    <div id="vocab-card-screen" data-speak="Screen" onclick="speakText('Screen', null, false, 'vocab-card-screen')" class="sentence-box clickable-phrase bg-white hover:bg-sky-50/70 rounded-3xl border-2 border-indigo-200 hover:border-amber-400 p-4 shadow-md hover:shadow-xl transition-all flex items-center justify-between gap-3 group">
+                        <div class="flex-1 space-y-1.5 text-center">
+                            <div class="flex items-center justify-center gap-2">
+                                <span class="w-7 h-7 rounded-full bg-indigo-600 text-white font-black text-xs flex items-center justify-center shrink-0 en-text">11</span>
+                                <span class="w-7 h-7 rounded-full bg-indigo-100 text-indigo-700 flex items-center justify-center text-xs">
+                                    <i class="fa-solid fa-volume-high"></i>
+                                </span>
+                            </div>
+                            <h2 class="sentence-text en-text text-2xl sm:text-3xl font-black text-slate-900">Screen</h2>
+                            <p dir="rtl" class="arabic-meaning text-sm sm:text-base font-extrabold text-indigo-800 bg-indigo-50 inline-block px-3.5 py-0.5 rounded-full border border-indigo-200">شاشة</p>
+                        </div>
+                        <div class="w-28 h-24 rounded-2xl bg-white border border-indigo-100 p-1 flex items-center justify-center shrink-0 overflow-hidden shadow-inner">
+                            <!-- SVG: Screen (شاشة حاسوب فضية أنيقة بواجهة سماء زرقاء وسحب وأشجار وتلال خضراء مطابق للصورة 100%) -->
+                            <svg viewBox="0 0 240 210" preserveAspectRatio="xMidYMid meet" class="w-full h-full animate-float group-hover:scale-105 transition-transform">
+                                <defs>
+                                    <linearGradient id="nightSkyScreen16" x1="0" y1="0" x2="0" y2="1">
+                                        <stop offset="0%" stop-color="#0f294a"/>
+                                        <stop offset="55%" stop-color="#0284c7"/>
+                                        <stop offset="100%" stop-color="#7dd3fc"/>
+                                    </linearGradient>
+                                    <linearGradient id="silverStandScreen16" x1="0" y1="0" x2="0" y2="1">
+                                        <stop offset="0%" stop-color="#94a3b8"/>
+                                        <stop offset="45%" stop-color="#f8fafc"/>
+                                        <stop offset="100%" stop-color="#cbd5e1"/>
+                                    </linearGradient>
+                                </defs>
+                                <!-- الحامل الفضي السفلي للشاشة -->
+                                <path d="M96,158 L144,158 L152,186 L186,196 L54,196 L88,186 Z" fill="url(#silverStandScreen16)" stroke="#64748b" stroke-width="1.5"/>
+                                <rect x="52" y="195" width="136" height="4" rx="2" fill="#64748b"/>
+                                <!-- هيكل الشاشة الخارجي الفضي والإطار الأسود -->
+                                <rect x="12" y="10" width="216" height="150" rx="8" fill="#cbd5e1" stroke="#64748b" stroke-width="2"/>
+                                <rect x="15" y="13" width="210" height="118" rx="4" fill="#0f172a"/>
+                                <!-- الشريط الفضي السفلي للشاشة -->
+                                <path d="M14,130 L226,130 L226,152 C226,156 223,158 218,158 L22,158 C17,158 14,156 14,152 Z" fill="#cbd5e1"/>
+                                <!-- خلفية الطبيعة داخل الشاشة -->
+                                <rect x="20" y="18" width="200" height="108" fill="url(#nightSkyScreen16)"/>
+                                <!-- النجوم الصغيرة والسحب البيضاء -->
+                                <circle cx="44" cy="34" r="1.2" fill="#ffffff"/>
+                                <circle cx="152" cy="28" r="1.2" fill="#ffffff"/>
+                                <circle cx="194" cy="32" r="1.2" fill="#ffffff"/>
+                                <circle cx="116" cy="48" r="1" fill="#ffffff"/>
+                                <g fill="#e2e8f0" opacity="0.9">
+                                    <circle cx="76" cy="34" r="11"/>
+                                    <circle cx="90" cy="32" r="14"/>
+                                    <circle cx="104" cy="35" r="10"/>
+                                    <circle cx="164" cy="60" r="10"/>
+                                    <circle cx="178" cy="58" r="13"/>
+                                    <circle cx="192" cy="61" r="9"/>
+                                </g>
+                                <!-- التلال الخضراء والأزهار البيضاء الصغيرة -->
+                                <path d="M20,100 Q65,112 115,104 Q168,112 220,98 L220,126 L20,126 Z" fill="#84cc16"/>
+                                <circle cx="38" cy="114" r="1.4" fill="#ffffff"/>
+                                <circle cx="72" cy="118" r="1.4" fill="#ffffff"/>
+                                <circle cx="122" cy="116" r="1.4" fill="#ffffff"/>
+                                <circle cx="176" cy="118" r="1.4" fill="#ffffff"/>
+                                <circle cx="204" cy="112" r="1.4" fill="#ffffff"/>
+                                <!-- الأشجار الخضراء على الجانبين -->
+                                <rect x="27" y="92" width="3" height="10" fill="#78350f"/>
+                                <circle cx="28" cy="82" r="11" fill="#a3e635"/>
+                                <rect x="49" y="96" width="3" height="10" fill="#78350f"/>
+                                <circle cx="50" cy="86" r="12" fill="#65a30d"/>
+                                <rect x="75" y="98" width="3" height="10" fill="#78350f"/>
+                                <circle cx="76" cy="88" r="11" fill="#4d7c0f"/>
+
+                                <rect x="161" y="96" width="3" height="10" fill="#78350f"/>
+                                <circle cx="162" cy="86" r="11" fill="#65a30d"/>
+                                <rect x="187" y="94" width="3" height="10" fill="#78350f"/>
+                                <circle cx="188" cy="84" r="12" fill="#4d7c0f"/>
+                                <rect x="210" y="90" width="3" height="10" fill="#78350f"/>
+                                <circle cx="211" cy="80" r="11" fill="#a3e635"/>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- 12. Telephone (هاتف) -->
+                    <div id="vocab-card-telephone" data-speak="Telephone" onclick="speakText('Telephone', null, false, 'vocab-card-telephone')" class="sentence-box clickable-phrase bg-white hover:bg-sky-50/70 rounded-3xl border-2 border-cyan-200 hover:border-amber-400 p-4 shadow-md hover:shadow-xl transition-all flex items-center justify-between gap-3 group">
+                        <div class="flex-1 space-y-1.5 text-center">
+                            <div class="flex items-center justify-center gap-2">
+                                <span class="w-7 h-7 rounded-full bg-cyan-700 text-white font-black text-xs flex items-center justify-center shrink-0 en-text">12</span>
+                                <span class="w-7 h-7 rounded-full bg-cyan-100 text-cyan-700 flex items-center justify-center text-xs">
+                                    <i class="fa-solid fa-volume-high"></i>
+                                </span>
+                            </div>
+                            <h2 class="sentence-text en-text text-2xl sm:text-3xl font-black text-slate-900">Telephone</h2>
+                            <p dir="rtl" class="arabic-meaning text-sm sm:text-base font-extrabold text-cyan-900 bg-cyan-50 inline-block px-3.5 py-0.5 rounded-full border border-cyan-200">هاتف</p>
+                        </div>
+                        <div class="w-28 h-24 rounded-2xl bg-white border border-cyan-100 p-1 flex items-center justify-center shrink-0 overflow-hidden shadow-inner">
+                            <!-- SVG: Telephone (هاتف كرتوني فيروزي وبرتقالي بقرص دائري وسلك أحمر حلزوني مطابق للصورة 100%) -->
+                            <svg viewBox="0 0 240 225" preserveAspectRatio="xMidYMid meet" class="w-full h-full animate-float-delayed group-hover:scale-105 transition-transform">
+                                <!-- السلك الحلزوني الأحمر على اليسار -->
+                                <path d="M40,86 L40,98 C14,102 12,152 46,154" fill="none" stroke="#0f172a" stroke-width="11" stroke-linecap="round"/>
+                                <path d="M40,86 L40,98 C14,102 12,152 46,154" fill="none" stroke="#ef4444" stroke-width="6.5" stroke-linecap="round" stroke-dasharray="4 3"/>
+
+                                <!-- القاعدة السفلية للهاتف -->
+                                <rect x="46" y="194" width="148" height="12" rx="3" fill="#1e293b" stroke="#0f172a" stroke-width="3"/>
+                                <rect x="42" y="172" width="156" height="22" rx="4" fill="#f97316" stroke="#0f172a" stroke-width="3.2"/>
+
+                                <!-- حامل السماعة الأحمر -->
+                                <path d="M84,74 L84,52 C84,48 94,48 94,52 L94,64 L146,64 L146,52 C146,48 156,48 156,52 L156,74 Z" fill="#dc2626" stroke="#0f172a" stroke-width="3" stroke-linejoin="round"/>
+
+                                <!-- جسم الهاتف الفيروزي -->
+                                <path d="M74,82 C74,74 82,72 90,72 L150,72 C158,72 166,74 166,82 L170,104 L184,116 L198,172 L42,172 L56,116 L70,104 Z" fill="#06b6d4" stroke="#0f172a" stroke-width="3.4" stroke-linejoin="round"/>
+                                <path d="M78,80 L162,80 L165,104 L178,116 L190,164 L50,164 L62,116 L75,104 Z" fill="#22d3ee" opacity="0.45"/>
+
+                                <!-- القرص الدائري للهاتف -->
+                                <circle cx="120" cy="122" r="38" fill="#dc2626" stroke="#0f172a" stroke-width="3"/>
+                                <circle cx="120" cy="122" r="33" fill="#fef3c7" stroke="#0f172a" stroke-width="2"/>
+                                <circle cx="120" cy="122" r="12" fill="#78350f" stroke="#0f172a" stroke-width="2.4"/>
+                                <!-- ثقوب القرص الدائرية الفيروزية الثمانية -->
+                                <g fill="#06b6d4" stroke="#0f172a" stroke-width="2.2">
+                                    <circle cx="120" cy="98" r="5.5"/>
+                                    <circle cx="137" cy="105" r="5.5"/>
+                                    <circle cx="144" cy="122" r="5.5"/>
+                                    <circle cx="137" cy="139" r="5.5"/>
+                                    <circle cx="120" cy="146" r="5.5"/>
+                                    <circle cx="103" cy="139" r="5.5"/>
+                                    <circle cx="96" cy="122" r="5.5"/>
+                                    <circle cx="103" cy="105" r="5.5"/>
+                                </g>
+
+                                <!-- سماعة الهاتف العلوية الفيروزية والصفراء والبرتقالية -->
+                                <path d="M36,42 C78,16 162,16 204,42 L192,62 C154,44 86,44 48,62 Z" fill="#06b6d4" stroke="#0f172a" stroke-width="3.4" stroke-linejoin="round"/>
+                                <!-- الطرف الأيسر للسماعة -->
+                                <path d="M22,66 C22,42 36,36 46,36 C56,36 66,42 66,66 Z" fill="#facc15" stroke="#0f172a" stroke-width="3.2"/>
+                                <path d="M46,40 C52,42 58,48 60,58" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+                                <rect x="18" y="66" width="52" height="20" rx="4" fill="#f97316" stroke="#0f172a" stroke-width="3.2"/>
+                                <!-- الطرف الأيمن للسماعة -->
+                                <path d="M174,66 C174,42 184,36 194,36 C204,36 218,42 218,66 Z" fill="#facc15" stroke="#0f172a" stroke-width="3.2"/>
+                                <path d="M196,40 C202,42 208,48 210,58" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+                                <rect x="170" y="66" width="52" height="20" rx="4" fill="#f97316" stroke="#0f172a" stroke-width="3.2"/>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- 13. Measurements (قياسات) -->
+                    <div id="vocab-card-measurements" data-speak="Measurements" onclick="speakText('Measurements', null, false, 'vocab-card-measurements')" class="sentence-box clickable-phrase bg-white hover:bg-sky-50/70 rounded-3xl border-2 border-yellow-300 hover:border-amber-400 p-4 shadow-md hover:shadow-xl transition-all flex items-center justify-between gap-3 group">
+                        <div class="flex-1 space-y-1.5 text-center">
+                            <div class="flex items-center justify-center gap-2">
+                                <span class="w-7 h-7 rounded-full bg-yellow-500 text-slate-900 font-black text-xs flex items-center justify-center shrink-0 en-text">13</span>
+                                <span class="w-7 h-7 rounded-full bg-yellow-100 text-yellow-700 flex items-center justify-center text-xs">
+                                    <i class="fa-solid fa-volume-high"></i>
+                                </span>
+                            </div>
+                            <h2 class="sentence-text en-text text-xl sm:text-2xl font-black text-slate-900">Measurements</h2>
+                            <p dir="rtl" class="arabic-meaning text-sm sm:text-base font-extrabold text-amber-900 bg-yellow-50 inline-block px-3.5 py-0.5 rounded-full border border-yellow-300">قياسات</p>
+                        </div>
+                        <div class="w-28 h-24 rounded-2xl bg-white border border-yellow-200 p-1 flex items-center justify-center shrink-0 overflow-hidden shadow-inner">
+                            <!-- SVG: Measurements (شريط قياس احترافي أصفر وأسود ثلاثي الأبعاد مكتوب عليه 5m 16ft مطابق للصورة 100%) -->
+                            <svg viewBox="0 0 250 225" preserveAspectRatio="xMidYMid meet" class="w-full h-full animate-float group-hover:scale-105 transition-transform">
+                                <defs>
+                                    <linearGradient id="tapeYellowCase16" x1="0" y1="0" x2="1" y2="1">
+                                        <stop offset="0%" stop-color="#fde047"/>
+                                        <stop offset="50%" stop-color="#facc15"/>
+                                        <stop offset="100%" stop-color="#eab308"/>
+                                    </linearGradient>
+                                </defs>
+                                <!-- الشريط الأصفر الممتد للأمام واليمين مع الأرقام 1 2 3 4 5 -->
+                                <polygon points="118,136 142,126 226,162 206,182" fill="#fde047" stroke="#854d0e" stroke-width="1.8" stroke-linejoin="round"/>
+                                <!-- تدريجات القياس والأرقام -->
+                                <g stroke="#1e293b" stroke-width="1.3">
+                                    <line x1="138" y1="130" x2="132" y2="136"/>
+                                    <line x1="152" y1="136" x2="146" y2="142"/>
+                                    <line x1="166" y1="142" x2="160" y2="148"/>
+                                    <line x1="180" y1="148" x2="174" y2="154"/>
+                                    <line x1="194" y1="154" x2="188" y2="160"/>
+                                    <line x1="208" y1="160" x2="202" y2="166"/>
+                                </g>
+                                <text x="136" y="148" font-size="10" font-weight="bold" fill="#0f172a" transform="rotate(22 136 148)" class="en-text">1</text>
+                                <text x="152" y="155" font-size="10" font-weight="bold" fill="#0f172a" transform="rotate(22 152 155)" class="en-text">2</text>
+                                <text x="168" y="162" font-size="10" font-weight="bold" fill="#0f172a" transform="rotate(22 168 162)" class="en-text">3</text>
+                                <text x="184" y="169" font-size="10" font-weight="bold" fill="#0f172a" transform="rotate(22 184 169)" class="en-text">4</text>
+                                <text x="200" y="176" font-size="10" font-weight="bold" fill="#0f172a" transform="rotate(22 200 176)" class="en-text">5</text>
+
+                                <!-- الخطاف المعدني الفضي في طرف الشريط -->
+                                <polygon points="204,174 232,160 236,192 210,206" fill="#cbd5e1" stroke="#475569" stroke-width="2" stroke-linejoin="round"/>
+                                <circle cx="212" cy="172" r="3" fill="#64748b"/>
+                                <circle cx="222" cy="168" r="3" fill="#64748b"/>
+
+                                <!-- الغلاف المطاطي الأسود الخلفي والسفلي للمتر -->
+                                <path d="M22,94 C20,54 48,26 88,22 L114,26 C72,30 44,58 46,98 L46,136 L112,166 L142,150 L142,130 L154,124 L154,154 L112,178 L22,134 Z" fill="#334155" stroke="#0f172a" stroke-width="2.2" stroke-linejoin="round"/>
+
+                                <!-- الجسم الأصفر الرئيسي للمتر -->
+                                <path d="M36,96 C34,54 64,28 104,28 C134,28 154,52 156,88 L156,122 L114,142 L114,166 L36,130 Z" fill="url(#tapeYellowCase16)" stroke="#ca8a04" stroke-width="2" stroke-linejoin="round"/>
+
+                                <!-- زر القفل الأسود البارز في المقدمة -->
+                                <polygon points="118,72 146,64 156,84 126,96" fill="#334155" stroke="#0f172a" stroke-width="2.2" stroke-linejoin="round"/>
+                                <line x1="128" y1="78" x2="148" y2="72" stroke="#64748b" stroke-width="2"/>
+                                <line x1="130" y1="84" x2="150" y2="78" stroke="#64748b" stroke-width="2"/>
+
+                                <!-- القرص الدائري الأسود الجانبي المكتوب عليه 5m 16ft -->
+                                <ellipse cx="64" cy="96" rx="34" ry="42" transform="rotate(-12 64 96)" fill="#334155" stroke="#0f172a" stroke-width="2.5"/>
+                                <ellipse cx="64" cy="96" rx="28" ry="35" transform="rotate(-12 64 96)" fill="#1e293b" stroke="#64748b" stroke-width="1.5"/>
+                                <text x="64" y="96" text-anchor="middle" font-size="22" font-weight="900" fill="#ffffff" class="en-text">5m</text>
+                                <text x="64" y="114" text-anchor="middle" font-size="12" font-weight="800" fill="#facc15" class="en-text">16ft</text>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- 14. Wi-Fi (جهاز الإنترنت) -->
+                    <div id="vocab-card-wifi" data-speak="Wi-Fi" onclick="speakText('Wi-Fi', null, false, 'vocab-card-wifi')" class="sentence-box clickable-phrase bg-white hover:bg-sky-50/70 rounded-3xl border-2 border-blue-200 hover:border-amber-400 p-4 shadow-md hover:shadow-xl transition-all flex items-center justify-between gap-3 group">
+                        <div class="flex-1 space-y-1.5 text-center">
+                            <div class="flex items-center justify-center gap-2">
+                                <span class="w-7 h-7 rounded-full bg-blue-600 text-white font-black text-xs flex items-center justify-center shrink-0 en-text">14</span>
+                                <span class="w-7 h-7 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center text-xs">
+                                    <i class="fa-solid fa-volume-high"></i>
+                                </span>
+                            </div>
+                            <h2 class="sentence-text en-text text-2xl sm:text-3xl font-black text-slate-900">Wi-Fi</h2>
+                            <p dir="rtl" class="arabic-meaning text-sm sm:text-base font-extrabold text-blue-800 bg-blue-50 inline-block px-3.5 py-0.5 rounded-full border border-blue-200">جهاز الإنترنت</p>
+                        </div>
+                        <div class="w-28 h-24 rounded-2xl bg-white border border-blue-100 p-1 flex items-center justify-center shrink-0 overflow-hidden shadow-inner">
+                            <!-- SVG: Wi-Fi Router (جهاز راوتر بهوائيين جانبيين وإشارات واي فاي وردية ونقطة خضراء مطابق للصورة 100%) -->
+                            <svg viewBox="0 0 240 225" preserveAspectRatio="xMidYMid meet" class="w-full h-full animate-float-delayed group-hover:scale-105 transition-transform">
+                                <!-- الهوائي الأيسر الطويل -->
+                                <path d="M54,142 L58,28 C58,22 68,22 68,28 L72,142 Z" fill="#475569" stroke="#0f172a" stroke-width="3.6" stroke-linejoin="round"/>
+                                <line x1="61" y1="32" x2="59" y2="136" stroke="#94a3b8" stroke-width="2.5" stroke-linecap="round"/>
+
+                                <!-- الهوائي الأيمن الطويل -->
+                                <path d="M168,142 L172,28 C172,22 182,22 182,28 L186,142 Z" fill="#475569" stroke="#0f172a" stroke-width="3.6" stroke-linejoin="round"/>
+                                <line x1="175" y1="32" x2="173" y2="136" stroke="#94a3b8" stroke-width="2.5" stroke-linecap="round"/>
+
+                                <!-- موجات إشارة Wi-Fi الوردية والكحلية والنقطة الخضراء في المنتصف -->
+                                <circle cx="120" cy="112" r="11" fill="#84cc16" stroke="#0f172a" stroke-width="3.4"/>
+                                <path d="M98,94 Q120,76 142,94" fill="none" stroke="#f43f5e" stroke-width="6.5" stroke-linecap="round"/>
+                                <path d="M96,90 Q120,70 144,90" fill="none" stroke="#0f172a" stroke-width="2.6" stroke-linecap="round"/>
+
+                                <path d="M88,82 Q120,56 152,82" fill="none" stroke="#f43f5e" stroke-width="6.5" stroke-linecap="round"/>
+                                <path d="M86,78 Q120,50 154,78" fill="none" stroke="#0f172a" stroke-width="2.6" stroke-linecap="round"/>
+
+                                <path d="M78,68 Q120,34 162,68" fill="none" stroke="#0f172a" stroke-width="3.6" stroke-linecap="round"/>
+
+                                <!-- القاعدة السفلية الكحلية لجهاز الراوتر -->
+                                <rect x="34" y="194" width="172" height="10" rx="4" fill="#1e3a8a" stroke="#0f172a" stroke-width="3.2"/>
+
+                                <!-- السطح العلوي الأزرق لجهاز الراوتر -->
+                                <path d="M24,162 L40,142 C44,138 50,138 56,138 L184,138 C190,138 196,138 200,142 L216,162 Z" fill="#0ea5e9" stroke="#0f172a" stroke-width="3.6" stroke-linejoin="round"/>
+                                <!-- خطوط بيضاء على السطح العلوي -->
+                                <line x1="52" y1="150" x2="68" y2="150" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round"/>
+                                <line x1="78" y1="150" x2="94" y2="150" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round"/>
+                                <line x1="104" y1="150" x2="120" y2="150" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round"/>
+
+                                <!-- الواجهة الأمامية الرمادية المائلة لجهاز الراوتر -->
+                                <rect x="24" y="162" width="192" height="32" rx="10" fill="#64748b" stroke="#0f172a" stroke-width="3.6"/>
+                                <rect x="28" y="165" width="184" height="24" rx="8" fill="#94a3b8" opacity="0.45"/>
+
+                                <!-- مستطيل المؤشرات الخضراء الثلاثة في اليسار -->
+                                <rect x="44" y="172" width="62" height="12" rx="3" fill="#1e293b" stroke="#0f172a" stroke-width="2.4"/>
+                                <rect x="50" y="175" width="14" height="6" rx="1.5" fill="#84cc16"/>
+                                <rect x="68" y="175" width="14" height="6" rx="1.5" fill="#84cc16"/>
+                                <rect x="86" y="175" width="14" height="6" rx="1.5" fill="#84cc16"/>
+
+                                <!-- الزران الدائريان البرتقالي والأحمر في اليمين -->
+                                <circle cx="164" cy="178" r="6" fill="#f59e0b" stroke="#0f172a" stroke-width="2.4"/>
+                                <circle cx="186" cy="178" r="6" fill="#ef4444" stroke="#0f172a" stroke-width="2.4"/>
+                            </svg>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- القسم الثاني: تحدي المفردات التفاعلي (Vocabulary Quiz) -->
+        <!-- ========================================== -->
+        <section class="bg-white rounded-3xl shadow-lg border border-amber-200 overflow-hidden">
+            <div class="bg-gradient-to-r from-amber-500 via-orange-500 to-rose-500 p-4 sm:px-6 flex flex-wrap items-center justify-between gap-3 text-white">
+                <div class="flex items-center gap-3">
+                    <span class="w-9 h-9 rounded-full bg-white text-amber-600 font-extrabold flex items-center justify-center text-lg shadow shrink-0">
+                        <i class="fa-solid fa-star"></i>
+                    </span>
+                    <div>
+                        <h3 class="text-lg sm:text-xl font-extrabold">اختبر حفظك للمفردات <span class="en-text">(Vocabulary Challenge)</span></h3>
+                        <p class="text-xs text-amber-100 font-semibold">استمع للكلمة أو اقرأ معناها بالعربية واختر الكلمة الإنجليزية الصحيحة</p>
+                    </div>
+                </div>
+                <div class="bg-white/25 backdrop-blur-sm border border-white/40 text-white font-extrabold px-4 py-1.5 rounded-full text-sm">
+                    النقاط: <span id="quiz-score" class="text-yellow-200 en-text text-base">0</span>
+                </div>
+            </div>
+
+            <div class="p-6 text-center space-y-5 bg-gradient-to-b from-amber-50/40 to-white">
+                <div class="bg-white border-2 border-amber-200 rounded-2xl p-4 sm:p-5 max-w-xl mx-auto shadow-sm space-y-2">
+                    <span class="text-xs font-extrabold text-amber-700 bg-amber-100 px-3 py-0.5 rounded-full">ما هي الكلمة الإنجليزية التي تعني:</span>
+                    <div class="flex items-center justify-center gap-3 pt-1">
+                        <button type="button" onclick="speakCurrentQuizWord()" class="audio-btn w-10 h-10 rounded-full bg-amber-500 hover:bg-amber-600 text-white flex items-center justify-center shadow shrink-0" title="استمع لتلميح النطق">
+                            <i class="fa-solid fa-volume-high text-sm"></i>
+                        </button>
+                        <p id="quiz-prompt-ar" class="text-2xl sm:text-3xl font-black text-slate-900">
+                            مهندس معماري
+                        </p>
+                    </div>
+                </div>
+
+                <div id="quiz-options" dir="ltr" class="grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-2xl mx-auto">
+                    <!-- خيارات الإجابة -->
+                </div>
+
+                <div id="quiz-feedback" class="hidden font-bold text-sm sm:text-base py-2.5 px-5 rounded-2xl max-w-md mx-auto"></div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- تذييل تعليمي -->
+    <footer class="max-w-6xl mx-auto px-4 pt-8 pb-4 text-center">
+        <div class="bg-white/85 border border-slate-200/80 rounded-2xl py-3 px-6 inline-flex flex-wrap items-center justify-center gap-3 shadow-sm text-xs sm:text-sm text-slate-600">
+            <span class="en-text font-extrabold text-teal-700 tracking-wide">LANGUA LEARN</span>
+            <span class="text-slate-300">•</span>
+            <span class="font-bold text-slate-700">جميع الحقوق محفوظة للأستاذ: ماجد سعد السويهري</span>
+        </div>
+    </footer>
+
+    <!-- ========================================== -->
+    <!-- البرمجة التفاعلية ونظام الصوت التعليمي الهادئ -->
+    <!-- ========================================== -->
+    <script>
+        // --- قائمة المفردات الـ 14 بالترتيب ---
+        const vocabItemsList = [
+            { id: 'architect', en: 'Architect', ar: 'مهندس معماري' },
+            { id: 'basement', en: 'basement', ar: 'قبو' },
+            { id: 'design', en: 'design', ar: 'تصميم' },
+            { id: 'oven', en: 'Oven', ar: 'فرن' },
+            { id: 'apartment', en: 'Apartment layout', ar: 'تصميم / تخطيط الشقة' },
+            { id: 'fridge', en: 'Fridge', ar: 'ثلاجة' },
+            { id: 'materials', en: 'Materials', ar: 'خامات / أدوات' },
+            { id: 'entrance', en: 'Entrance', ar: 'مدخل' },
+            { id: 'key', en: 'Key', ar: 'مفتاح' },
+            { id: 'gate', en: 'Gate', ar: 'بوابة' },
+            { id: 'screen', en: 'Screen', ar: 'شاشة' },
+            { id: 'telephone', en: 'Telephone', ar: 'هاتف' },
+            { id: 'measurements', en: 'Measurements', ar: 'قياسات' },
+            { id: 'wifi', en: 'Wi-Fi', ar: 'جهاز الإنترنت' }
+        ];
+
+        let areArabicMeaningsHidden = false;
+
+        function toggleArabicMeanings() {
+            areArabicMeaningsHidden = !areArabicMeaningsHidden;
+            const labels = document.querySelectorAll('.arabic-meaning');
+            const btnLabel = document.getElementById('toggle-ar-label');
+            const btnIcon = document.querySelector('#toggle-ar-btn i');
+
+            labels.forEach(el => {
+                if (areArabicMeaningsHidden) {
+                    el.classList.add('opacity-0', 'select-none');
+                } else {
+                    el.classList.remove('opacity-0', 'select-none');
+                }
+            });
+
+            if (btnLabel) {
+                btnLabel.textContent = areArabicMeaningsHidden ? 'إظهار الترجمة العربية' : 'إخفاء الترجمة العربية';
+            }
+            if (btnIcon) {
+                btnIcon.className = areArabicMeaningsHidden ? 'fa-solid fa-eye' : 'fa-solid fa-eye-slash';
+            }
+            showToast(areArabicMeaningsHidden ? 'تم إخفاء الترجمة العربية لاختبار حفظك!' : 'تم إظهار الترجمة العربية!');
+        }
+
+        async function playAllVocabWords() {
+            stopAudio();
+            isSequencePlaying = true;
+            const mySession = speechSessionCounter;
+
+            try {
+                for (let i = 0; i < vocabItemsList.length; i++) {
+                    if (!isSequencePlaying || mySession !== speechSessionCounter) break;
+                    const item = vocabItemsList[i];
+                    await speakText(item.en, null, true, `vocab-card-${item.id}`);
+                    if (!isSequencePlaying || mySession !== speechSessionCounter) break;
+                    if (i < vocabItemsList.length - 1) {
+                        await new Promise(res => {
+                            const t = setTimeout(res, 480);
+                            activeTimeouts.push(t);
+                        });
+                    }
+                }
+            } finally {
+                if (mySession === speechSessionCounter) {
+                    isSequencePlaying = false;
+                    clearHighlights();
+                    hideLiveReadingToast();
+                    setSpeakingUI(false);
+                }
+            }
+        }
+
+        // --- الاختبار التفاعلي السريع ---
+        let currentQuizIdx = 0;
+        let quizScore = 0;
+        let isQuizTransitioning = false;
+
+        function renderQuizQuestion() {
+            try {
+                const targetItem = vocabItemsList[currentQuizIdx];
+                const promptEl = document.getElementById('quiz-prompt-ar');
+                const optsEl = document.getElementById('quiz-options');
+                const feedbackEl = document.getElementById('quiz-feedback');
+
+                if (promptEl) promptEl.textContent = targetItem.ar;
+                if (feedbackEl) feedbackEl.classList.add('hidden');
+
+                // اختيار مشتتين عشوائيين
+                const distractors = vocabItemsList
+                    .filter(v => v.id !== targetItem.id)
+                    .sort(() => Math.random() - 0.5)
+                    .slice(0, 2);
+
+                const options = [targetItem, ...distractors].sort(() => Math.random() - 0.5);
+
+                if (optsEl) {
+                    optsEl.innerHTML = '';
+                    options.forEach(opt => {
+                        const btn = document.createElement('button');
+                        btn.type = 'button';
+                        btn.className = 'en-text bg-white hover:bg-amber-50 border-2 border-slate-200 hover:border-amber-400 text-slate-800 font-extrabold text-lg py-3 px-4 rounded-2xl shadow-sm transition cursor-pointer';
+                        btn.textContent = opt.en;
+                        btn.onclick = () => handleQuizAnswer(opt, targetItem, btn);
+                        optsEl.appendChild(btn);
+                    });
+                }
+            } catch (err) {
+                console.error('Error rendering quiz:', err);
+            }
+        }
+
+        function speakCurrentQuizWord() {
+            const targetItem = vocabItemsList[currentQuizIdx];
+            if (targetItem) speakText(targetItem.en);
+        }
+
+        async function handleQuizAnswer(chosenItem, targetItem, btnEl) {
+            if (isQuizTransitioning) return;
+            const feedbackEl = document.getElementById('quiz-feedback');
+            if (!feedbackEl) return;
+
+            feedbackEl.classList.remove('hidden', 'bg-emerald-100', 'text-emerald-800', 'border-emerald-300', 'bg-rose-100', 'text-rose-800', 'border-rose-300');
+            btnEl.classList.remove('shake');
+
+            if (chosenItem.id === targetItem.id) {
+                stopAudio();
+                isQuizTransitioning = true;
+                const mySession = speechSessionCounter;
+
+                quizScore += 10;
+                const scoreEl = document.getElementById('quiz-score');
+                if (scoreEl) scoreEl.textContent = quizScore;
+
+                feedbackEl.textContent = `ممتاز! الإجابة الصحيحة هي: ${targetItem.en} (${targetItem.ar})`;
+                feedbackEl.classList.add('bg-emerald-100', 'text-emerald-800', 'border', 'border-emerald-300');
+                btnEl.classList.add('border-emerald-500', 'bg-emerald-50', 'ring-4', 'ring-emerald-300');
+                showToast(`رائع! +10 نقاط`);
+
+                try {
+                    await speakText(`Great job! ${targetItem.en}!`, null, true);
+                    if (mySession !== speechSessionCounter) return;
+
+                    await new Promise(res => {
+                        const timer = setTimeout(res, 750);
+                        activeTimeouts.push(timer);
+                    });
+                    if (mySession !== speechSessionCounter) return;
+
+                    currentQuizIdx = (currentQuizIdx + 1) % vocabItemsList.length;
+                    isQuizTransitioning = false;
+                    renderQuizQuestion();
+                } finally {
+                    if (mySession === speechSessionCounter) {
+                        isQuizTransitioning = false;
+                    }
+                }
+            } else {
+                btnEl.classList.add('shake');
+                feedbackEl.textContent = `كلمة (${chosenItem.en}) تعني (${chosenItem.ar}). حاول مرة أخرى!`;
+                feedbackEl.classList.add('bg-rose-100', 'text-rose-800', 'border', 'border-rose-300');
+                speakText(`Try again! ${chosenItem.en}`);
+            }
+        }
+
+        // ==========================================
+        // نظام الصوت التعليمي الهادئ للمعلمة
+        // ==========================================
+        let preferMaleTeacher = false;
+        let isSlowTrainingMode = false;
+        let isSequencePlaying = false;
+        let activeTimeouts = [];
+        let speechSessionCounter = 0;
+
+        function getCurrentSpeechRate() {
+            return isSlowTrainingMode ? 0.65 : 0.76;
+        }
+
+        function showLiveReadingToast(txt) {
+            const toast = document.getElementById('liveReadingToast');
+            const wordEl = document.getElementById('toastWord');
+            const rateEl = document.getElementById('toastRateLabel');
+            if (rateEl) rateEl.innerText = `Calm Educational Voice (${getCurrentSpeechRate()}x):`;
+            if (wordEl) wordEl.innerText = txt;
+            if (toast) {
+                toast.classList.remove('opacity-0', 'translate-y-8');
+                toast.classList.add('opacity-100', 'translate-y-0');
+            }
+        }
+
+        function hideLiveReadingToast() {
+            const toast = document.getElementById('liveReadingToast');
+            if (toast) {
+                toast.classList.add('opacity-0', 'translate-y-8');
+                toast.classList.remove('opacity-100', 'translate-y-0');
+            }
+        }
+
+        function toggleSpeechSpeed() {
+            isSlowTrainingMode = !isSlowTrainingMode;
+            const speedLabel = document.getElementById('speed-label');
+            if (speedLabel) {
+                speedLabel.textContent = isSlowTrainingMode ? "بطيء جداً (0.65x)" : "هادئ (0.76x)";
+            }
+            showToast(isSlowTrainingMode ? "تم تفعيل النطق البطيء جداً للتدريب!" : "تم تفعيل الصوت التعليمي الهادئ (0.76x)!");
+        }
+
+        function changeTeacherVoice(voiceMode) {
+            preferMaleTeacher = (voiceMode === 'calm-male');
+            stopAudio();
+            speakText("Hello! Let's learn new vocabulary together.");
+            showToast(preferMaleTeacher ? "تم تفعيل صوت المعلم الهادئ" : "تم تفعيل صوت المعلمة الهادئة");
+        }
+
+        function findCalmEducationalVoice(voicesList, preferMale = false) {
+            if (!voicesList || voicesList.length === 0) return null;
+            const enVoices = voicesList.filter(v => v.lang && v.lang.toLowerCase().startsWith('en'));
+            const pool = enVoices.length > 0 ? enVoices : voicesList;
+
+            const femalePriority = [
+                'emma online (natural)',
+                'ava online (natural)',
+                'jenny online (natural)',
+                'aria online (natural)',
+                'michelle online (natural)',
+                'ana online (natural)',
+                'clara online (natural)',
+                'sonia online (natural)',
+                'google uk english female',
+                'google us english',
+                'samantha',
+                'karen',
+                'moira',
+                'tessa'
+            ];
+
+            const malePriority = [
+                'william multilingual',
+                'william online (natural)',
+                'andrew online (natural)',
+                'liam online (natural)',
+                'ryan online (natural)',
+                'daniel',
+                'david',
+                'mark'
+            ];
+
+            const listToCheck = preferMale ? [...malePriority, ...femalePriority] : [...femalePriority, ...malePriority];
+            for (const key of listToCheck) {
+                const match = pool.find(v => v.name.toLowerCase().includes(key));
+                if (match) return match;
+            }
+            return pool[0] || null;
+        }
+
+        function setSpeakingUI(isSpeaking) {
+            const pulse = document.getElementById('teacher-pulse');
+            const stopBtn = document.getElementById('stop-audio-btn');
+
+            if (isSpeaking) {
+                if (pulse) pulse.classList.remove('hidden');
+                if (stopBtn) stopBtn.classList.remove('hidden');
+            } else {
+                if (pulse) pulse.classList.add('hidden');
+                if (stopBtn) stopBtn.classList.add('hidden');
+            }
+        }
+
+        function clearHighlights() {
+            document.querySelectorAll('.active-reading-box').forEach(el => {
+                el.classList.remove('active-reading-box');
+            });
+            document.querySelectorAll('.active-reading-text').forEach(el => {
+                el.classList.remove('active-reading-text');
+            });
+        }
+
+        function highlightCardById(cardId) {
+            clearHighlights();
+            if (!cardId) return;
+            const el = document.getElementById(cardId);
+            if (!el) return;
+            el.classList.add('active-reading-box');
+            const innerText = el.querySelector('.sentence-text');
+            if (innerText) innerText.classList.add('active-reading-text');
+            el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+
+        function highlightSentence(text) {
+            clearHighlights();
+            if (!text) return;
+
+            const normalizedTarget = text.trim().replace(/\s+/g, ' ');
+            const speakElements = document.querySelectorAll('[data-speak]');
+
+            for (const el of speakElements) {
+                const attrText = (el.getAttribute('data-speak') || '').trim().replace(/\s+/g, ' ');
+                if (attrText === normalizedTarget) {
+                    if (el.classList.contains('sentence-box')) {
+                        el.classList.add('active-reading-box');
+                        const innerText = el.querySelector('.sentence-text');
+                        if (innerText) innerText.classList.add('active-reading-text');
+                    } else {
+                        el.classList.add('active-reading-text');
+                    }
+                    el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                    break;
+                }
+            }
+        }
+
+        function stopAudio() {
+            isSequencePlaying = false;
+            isQuizTransitioning = false;
+            speechSessionCounter++;
+            activeTimeouts.forEach(t => {
+                clearTimeout(t);
+                clearInterval(t);
+            });
+            activeTimeouts = [];
+
+            if ('speechSynthesis' in window) {
+                try {
+                    window.speechSynthesis.cancel();
+                } catch (e) {}
+            }
+            clearHighlights();
+            hideLiveReadingToast();
+            setSpeakingUI(false);
+        }
+
+        function speakText(text, btnElement = null, keepSequenceState = false, highlightCardId = null) {
+            return new Promise((resolve) => {
+                try {
+                    if (!keepSequenceState) {
+                        stopAudio();
+                    }
+
+                    const mySession = speechSessionCounter;
+                    const rate = getCurrentSpeechRate();
+                    const pitch = preferMaleTeacher ? 0.94 : 1.04;
+
+                    if (highlightCardId) {
+                        highlightCardById(highlightCardId);
+                    } else {
+                        highlightSentence(text);
+                    }
+                    showLiveReadingToast(text);
+                    setSpeakingUI(true);
+
+                    let finished = false;
+                    let safetyTimer = null;
+                    const finishOnce = () => {
+                        if (finished) return;
+                        finished = true;
+                        if (safetyTimer) clearTimeout(safetyTimer);
+                        if (!keepSequenceState && mySession === speechSessionCounter) {
+                            clearHighlights();
+                            hideLiveReadingToast();
+                            setSpeakingUI(false);
+                        }
+                        resolve();
+                    };
+
+                    const words = text.trim().split(/\s+/).filter(Boolean).length;
+                    const safetyMs = Math.max(2200, Math.round((words / rate) * 750) + 1800);
+                    safetyTimer = setTimeout(finishOnce, safetyMs);
+                    activeTimeouts.push(safetyTimer);
+
+                    if (!('speechSynthesis' in window)) {
+                        return;
+                    }
+
+                    const startTimer = setTimeout(() => {
+                        if (mySession !== speechSessionCounter || finished) return;
+                        try {
+                            const voices = window.speechSynthesis.getVoices();
+                            const chosenVoice = findCalmEducationalVoice(voices, preferMaleTeacher);
+
+                            const utterance = new SpeechSynthesisUtterance(text);
+                            window.activeUtteranceRef = utterance;
+                            if (chosenVoice) {
+                                utterance.voice = chosenVoice;
+                                utterance.lang = chosenVoice.lang || 'en-US';
+                            } else {
+                                utterance.lang = 'en-US';
+                            }
+                            utterance.rate = rate;
+                            utterance.pitch = pitch;
+                            utterance.volume = 1.0;
+
+                            utterance.onend = finishOnce;
+                            utterance.onerror = (err) => {
+                                if (err && (err.error === 'canceled' || err.error === 'interrupted')) return;
+                                finishOnce();
+                            };
+
+                            window.speechSynthesis.speak(utterance);
+                        } catch (e) {
+                            finishOnce();
+                        }
+                    }, 50);
+                    activeTimeouts.push(startTimer);
+                } catch (err) {
+                    resolve();
+                }
+            });
+        }
+
+        let toastTimer = null;
+        function showToast(message) {
+            const toast = document.getElementById('toast-message');
+            const toastText = document.getElementById('toast-text');
+            if (!toast || !toastText) return;
+
+            toastText.textContent = message;
+            toast.classList.remove('hidden');
+
+            if (toastTimer) clearTimeout(toastTimer);
+            toastTimer = setTimeout(() => {
+                toast.classList.add('hidden');
+            }, 3500);
+        }
+
+        window.onload = function () {
+            renderQuizQuestion();
+            if ('speechSynthesis' in window) {
+                try {
+                    window.speechSynthesis.getVoices();
+                    window.speechSynthesis.onvoiceschanged = () => {
+                        window.speechSynthesis.getVoices();
+                    };
+                } catch (e) {}
+            }
+        };
+    </script>
+</body>
+</html>
